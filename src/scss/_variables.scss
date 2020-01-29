@@ -1,0 +1,55 @@
+/* Main Colors */
+$color-base      : #171717;
+$color-red       : #E20210;
+$color-blue      : #0E3DB8;
+$color-blue-light: #CEE0EC;
+$color-white     : #f8f8f8;
+
+$color-bg              : $color-white;
+$color-text            : $color-base;
+$color-link            : $color-blue;
+$color-link-hover      : $color-blue;
+$color-error           : $color-red;
+$color-popup-background: #fff;
+
+$color-overlay  : $color-base;
+$opacity-overlay: .4;
+
+$link-opacity    : .7;
+$transition-delay: .2s;
+
+$header-z-index: 1000;
+
+/* Fonts */
+$font-family         : sans-serif;
+$font-family-alt     : sans-serif;
+$font-family-fontello: "fontello";
+$font-size           : 15px;
+$font-size-lg        : 16px;
+$font-weight         : normal;
+$letter-spacing      : normal;
+$line-height         : 24px;
+$line-height-lg      : 26px;
+
+/* Screen sizes */
+$grid-breakpoints: (xs: 0,
+    sm: 320px,
+    md: 768px,
+    lg: 1280px,
+    xl: 1920px);
+
+$container-max-widths: (xs: 100%,
+    sm: 100%,
+    md: 100%,
+    lg: 1170px,
+    xl: 1170px);
+$container-paddings: (xs: 25px,
+    sm: 25px,
+    md: 50px,
+    lg: 0,
+    xl: 0);
+$column-gaps: (xs: 12px,
+    sm: 12px,
+    md: 26px,
+    lg: 48px,
+    xl: 62px);

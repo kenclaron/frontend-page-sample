@@ -1,0 +1,35 @@
+block config
+
+doctype html
+html(lang=__.lang, class="no-js")
+    head
+        block head
+            include head
+    body.body(class=bodyClass)
+        include mixins/svgsprite
+        
+        block header
+            include blocks/header
+        
+        .content
+            block content
+        
+        block footer
+            include blocks/footer
+        
+        .hidden
+            // include popups here
+        
+        block styles
+            link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
+        block scripts-config
+            script.
+                /* изменяемые настройки скриптов, указаны значения по умолчанию */
+                var appConfig = {
+                    /*
+                    scrollToOffset: 150, // оффсет при скролле до элемента
+                    scrollToSpeed: 500, // скорость скролла 
+                    */
+                }
+        block scripts
+            include scripts

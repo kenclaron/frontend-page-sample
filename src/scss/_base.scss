@@ -1,0 +1,97 @@
+.body {
+    background: $color-bg;
+    color: $color-text;
+
+    font-family: $font-family;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    @include media-breakpoint-up(lg) {
+        font-size: $font-size-lg;
+        line-height: $line-height-lg;
+    }
+
+    &._frozen {
+        overflow: hidden;
+        height: 100%;
+    }
+
+}
+.container {
+    @include make-container();
+}
+.hidden {
+    display: none !important;
+}
+.hidden-sm {
+    @include media-breakpoint-down(sm) {
+        display: none !important;
+    }
+}
+.hidden-lg {
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+}
+.visible-sm {
+    @include media-breakpoint-up(md) {
+        display: none !important;
+    }
+}
+.visible-md {
+    @include media-breakpoint-down(sm) {
+        display: none !important;
+    }
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+}
+.visible-lg {
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+.nowrap {
+    white-space: nowrap;
+}
+.muted {
+    opacity: .5;
+}
+.dashed {
+    border-bottom: 1px dashed;
+}
+a, .link {
+    cursor: pointer;
+    color: $color-link;
+}
+strong {
+    font-weight: bold;
+}
+
+::placeholder {
+    color: rgba($color-text, .5);
+}
+:focus::placeholder {
+    opacity: 1;
+}
+
+.necessaty_fields {
+    display: none !important;
+}
+
+.ios-fixed {
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.lazyload {
+    visibility: hidden;
+}
+
+.fancybox-navigation {
+    position: static;
+}
