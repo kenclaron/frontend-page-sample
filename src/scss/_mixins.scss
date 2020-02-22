@@ -1,7 +1,9 @@
 /* common */
 
 @mixin transition($p) {
-    transition: $p $transition-delay ease-in-out;
+    transition-property       : $p;
+    transition-duration       : $transition-duration;
+    transition-timing-function: $transition-timing-function;
 }
 
 @mixin row($gutter) {

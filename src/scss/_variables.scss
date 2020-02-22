@@ -16,7 +16,9 @@ $color-overlay  : $color-base;
 $opacity-overlay: .4;
 
 $link-opacity    : .7;
-$transition-delay: .2s;
+
+$transition-duration: .2s;
+$transition-timing-function: ease-in-out;
 
 $header-z-index: 1000;
 
@@ -28,8 +30,8 @@ $font-size           : 15px;
 $font-size-lg        : 16px;
 $font-weight         : normal;
 $letter-spacing      : normal;
-$line-height         : 24px;
-$line-height-lg      : 26px;
+$line-height         : normal;
+$line-height-lg      : normal;
 
 /* Screen sizes */
 $grid-breakpoints: (xs: 0,
