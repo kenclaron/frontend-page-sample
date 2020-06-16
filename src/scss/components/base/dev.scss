@@ -1,0 +1,37 @@
+// use only for demonstration
+.body.dev {
+    .block {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &:not(._white) {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        border: 1px dotted rgba($color-text, .5);
+    }
+}
+
+.dev {
+    &-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-menu {
+        @include media-breakpoint-up(md) {
+            column-count: 2;
+        }
+
+        @include media-breakpoint-up(lg) {
+            column-count: 4;
+        }
+
+        &__item {
+            display: block;
+            margin-bottom: 1em;
+            page-break-inside: avoid;
+        }
+    }
+}

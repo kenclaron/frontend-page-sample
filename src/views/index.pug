@@ -2,10 +2,75 @@ extends _includes/layout
 
 block config
     - var pagetitle = 'Index'
+    - var bodyClass = 'dev'
 
 block content
     .container
-        p Hello world
+        .block 
+            pre .block
+        .block._mb-none 
+            pre .block._mb-none
+        .block._white._mb-small 
+            pre .block._white._mb-small
+        .block 
+            span.text-muted .text-muted 
+            span.text-nowrap .text-nowrap 
+            span.text-uppercase .text-uppercase 
+            span.color-primary .color-primary 
+            span.color-secondary .color-secondary 
+            a(href="#") a
+            | 
+            span.link span.link
+        .block.dev-flex 
+            button.btn .btn
+            button.btn(disabled) .btn(disabled)
+            button.btn._primary .btn._primary
+            button.btn._primary(disabled) .btn._primary(disabled)
+            button.btn._secondary .btn._secondary
+            button.btn._secondary(disabled) .btn._secondary(disabled)
+        .block 
+            form.form
+                .form__item
+                    .input.js-label
+                        input
+                        label .input.js-label input
+                .form__item
+                    .input._error.js-label
+                        input(required)
+                        label .input._error.js-label input(required)
+                .form__item
+                    .input.js-label
+                        input(disabled)
+                        label .input.js-label input(disabled)
+                .form__item
+                    .input.js-label
+                        input(type="tel").js-mask__tel
+                        label .input.js-label input.js-mask__tel(type="tel")
+        .block 
+            pre .bk
+            p.bk
+                span.bk__item 
+                    a(href="#") span.bk__item a(href="#")
+                span.bk__item
+                    a(href="#") span.bk__item a(href="#")
+                span.bk__item span.bk__item
+        .block 
+            pre div.rte
+            .rte
+                h3 Title H3
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas iaculis nisl, in fermentum urna scelerisque nec. Mauris enim erat, bibendum sed condimentum at, ultrices non arcu. Morbi eu sem porttitor, vulputate justo ut, fringilla turpis. Donec in elementum nunc. Cras maximus faucibus dictum. Duis sodales lacus ut eros sollicitudin tristique. Duis vitae tincidunt sem, eget ullamcorper turpis. Maecenas tristique eget leo sed sodales.
+                ul
+                    li One
+                    li Two
+                    li Three
+                    li Four
+                p Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.
+                ol
+                    li One
+                    li Two
+                    li Three
+                    li Four
+                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
         //ul.dev-menu
             li.dev-menu__item
                 a(href="main.html") Главная

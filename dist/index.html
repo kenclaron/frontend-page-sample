@@ -26,13 +26,83 @@
     <meta property="twitter:description" content="description">
     <meta property="og:image" content="assets/share.png">
   </head>
-  <body class="body">
+  <body class="body dev">
     <header class="header">
-      <div class="container">header</div>
+      <div class="header__inner">header</div>
     </header>
     <div class="content">
       <div class="container">
-        <p>Hello world</p>
+        <div class="block"> 
+          <pre>.block</pre>
+        </div>
+        <div class="block _mb-none"> 
+          <pre>.block._mb-none</pre>
+        </div>
+        <div class="block _white _mb-small"> 
+          <pre>.block._white._mb-small</pre>
+        </div>
+        <div class="block"> <span class="text-muted">.text-muted </span><span class="text-nowrap">.text-nowrap </span><span class="text-uppercase">.text-uppercase </span><span class="color-primary">.color-primary </span><span class="color-secondary">.color-secondary </span><a href="#">a</a> <span class="link">span.link</span></div>
+        <div class="block dev-flex"> 
+          <button class="btn">.btn</button>
+          <button class="btn" disabled>.btn(disabled)</button>
+          <button class="btn _primary">.btn._primary</button>
+          <button class="btn _primary" disabled>.btn._primary(disabled)</button>
+          <button class="btn _secondary">.btn._secondary</button>
+          <button class="btn _secondary" disabled>.btn._secondary(disabled)</button>
+        </div>
+        <div class="block"> 
+          <form class="form">
+            <div class="form__item">
+              <div class="input js-label">
+                <input>
+                <label>.input.js-label input</label>
+              </div>
+            </div>
+            <div class="form__item">
+              <div class="input _error js-label">
+                <input required>
+                <label>.input._error.js-label input(required)</label>
+              </div>
+            </div>
+            <div class="form__item">
+              <div class="input js-label">
+                <input disabled>
+                <label>.input.js-label input(disabled)</label>
+              </div>
+            </div>
+            <div class="form__item">
+              <div class="input js-label">
+                <input class="js-mask__tel" type="tel">
+                <label>.input.js-label input.js-mask__tel(type="tel")</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="block"> 
+          <pre>.bk</pre>
+          <p class="bk"><span class="bk__item"> <a href="#">span.bk__item a(href="#")</a></span><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item">span.bk__item</span></p>
+        </div>
+        <div class="block"> 
+          <pre>div.rte</pre>
+          <div class="rte">
+            <h3>Title H3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas iaculis nisl, in fermentum urna scelerisque nec. Mauris enim erat, bibendum sed condimentum at, ultrices non arcu. Morbi eu sem porttitor, vulputate justo ut, fringilla turpis. Donec in elementum nunc. Cras maximus faucibus dictum. Duis sodales lacus ut eros sollicitudin tristique. Duis vitae tincidunt sem, eget ullamcorper turpis. Maecenas tristique eget leo sed sodales.</p>
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+              <li>Four</li>
+            </ul>
+            <p>Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.</p>
+            <ol>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+              <li>Four</li>
+            </ol>
+            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
+          </div>
+        </div>
         <!--ul.dev-menu
         li.dev-menu__item
             a(href="main.html") Главная
@@ -49,7 +119,7 @@
     <div class="hidden">
       <!-- include popups here-->
     </div>
-    <link rel="stylesheet" href="assets/css/common.css?v=1.1.1">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.0">
     <script>
       /* изменяемые настройки скриптов, указаны значения по умолчанию */
       var appConfig = {
@@ -60,6 +130,6 @@
       }
     </script>
     <script src="assets/js/vendors~main.bundle.js"></script>
-    <script src="assets/js/main.bundle.js?v=1.1.1"></script>
+    <script src="assets/js/main.bundle.js?v=1.2.0"></script>
   </body>
 </html>

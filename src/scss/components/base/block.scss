@@ -1,0 +1,45 @@
+// base blocks
+.block {
+    $root: &;
+
+    max-width: map-get($grid-breakpoints, xl);
+    margin: 0 auto;
+    margin-bottom: map-get($block-margins, sm);
+
+    @each $key in (md, lg, xl) {
+        @include media-breakpoint-up($key) {
+            margin-bottom: map-get($block-margins, $key);
+        }
+    }
+
+    &._mb-small {
+        margin-bottom: map-get($block-margins-sm, sm);
+
+        @each $key in (md, lg, xl) {
+            @include media-breakpoint-up($key) {
+                margin-bottom: map-get($block-margins-sm, $key);
+            }
+        }
+    }
+
+    &._mb-none {
+        margin-bottom: 0;
+    }
+
+    &._white {
+        background-color: $color-white;
+        padding-top: map-get($block-margins, sm);
+        padding-bottom: map-get($block-margins, sm);
+
+        @each $key in (md, lg, xl) {
+            @include media-breakpoint-up($key) {
+                padding-top: map-get($block-margins, $key);
+                padding-bottom: map-get($block-margins, $key);
+            }
+        }
+    }
+
+    &._full {
+        max-width: 100%;
+    }
+}

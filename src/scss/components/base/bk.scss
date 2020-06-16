@@ -1,0 +1,35 @@
+/* breadcrumbs */
+.bk {
+    $root: &;
+    font-size: 0;
+
+    &__item {
+        display: inline-block;
+        margin-right: .5em;
+        font-size: $font-size;
+        line-height: $line-height;
+        
+        &:after {
+            content: '/';
+            display: inline-block;
+            margin-left: .5em;
+            color: rgba($color-text, .5);
+        }
+        
+        &:last-child {
+            margin-right: 0;
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    // &__link {
+    //     color: $color-text;
+    //     @include transition(color);
+
+    //     @include hover-desktop {
+    //         color: $color-red;
+    //     }
+    // }
+}

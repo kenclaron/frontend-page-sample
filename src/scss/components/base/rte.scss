@@ -1,0 +1,52 @@
+// rte content
+.rte {
+    h3 {
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    >* {
+        margin-bottom: 1.5rem;
+        break-inside: avoid;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul,
+    ol {
+        li {
+            padding-left: 1rem;
+            margin-bottom: .5rem;
+
+            &:before {
+                position: absolute;
+                left: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    ul {
+        li {
+            &:before {
+                content: '⋅';
+            }
+        }
+    }
+
+    ol {
+        counter-reset: myCounter;
+
+        li {
+            &:before {
+                counter-increment: myCounter;
+                content: counter(myCounter) ".";
+            }
+        }
+    }
+}

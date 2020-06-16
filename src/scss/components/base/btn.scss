@@ -1,0 +1,58 @@
+.btn {
+    $root: &;
+
+    display: inline-block;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    @include transition((background-color, opacity));
+    background-color: $color-gray;
+    line-height: 3rem;
+
+    @include media-breakpoint-up(md) {
+        width: auto;
+    }
+
+    &:hover {
+        background-color: darken($color-gray, 10%);
+    }
+
+    &:focus {
+        background-color: darken($color-gray, 20%);
+    }
+
+    &:disabled {
+        opacity: .7;
+        pointer-events: none;
+    }
+
+    &._primary,
+    &._secondary {
+        color: $color-white;
+    }
+
+    &._primary {
+        background-color: $color-primary;
+
+        &:hover {
+            background-color: darken($color-primary, 10%);
+        }
+
+        &:focus {
+            background-color: darken($color-primary, 20%);
+        }
+    }
+
+    &._secondary {
+        background-color: $color-secondary;
+
+        &:hover {
+            background-color: darken($color-secondary, 10%);
+        }
+
+        &:focus {
+            background-color: darken($color-secondary, 20%);
+        }
+    }
+}

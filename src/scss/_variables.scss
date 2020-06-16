@@ -1,57 +1,67 @@
 /* Main Colors */
-$color-base      : #171717;
-$color-red       : #E20210;
-$color-blue      : #0E3DB8;
-$color-blue-light: #CEE0EC;
-$color-white     : #f8f8f8;
+$color-base : #171717;
+$color-white : #fff;
+$color-gray : #ccc;
+$color-primary : #E20210;
+$color-secondary : #0E3DB8;
 
-$color-bg              : $color-white;
-$color-text            : $color-base;
-$color-link            : $color-blue;
-$color-link-hover      : $color-blue;
-$color-error           : $color-red;
-$color-popup-background: #fff;
+$color-bg : #f8f8f8;
+$color-text : $color-base;
+$color-error : $color-primary;
+$color-popup-background: $color-white;
 
-$color-overlay  : $color-base;
+$color-overlay : $color-base;
 $opacity-overlay: .4;
 
-$link-opacity    : .7;
+$link-color : $color-text;
+$link-hover-color : $color-primary;
 
 $transition-duration: .2s;
 $transition-timing-function: ease-in-out;
 
 $header-z-index: 1000;
+$header-height: (sm: 2rem,
+    md: 3rem,
+    lg: 4rem,
+    xl: 5rem,
+);
+// $header-height-fixed: ;
 
 /* Fonts */
-$font-family         : sans-serif;
-$font-family-alt     : sans-serif;
+$font-family : sans-serif;
+$font-family-alt : sans-serif;
 $font-family-fontello: "fontello";
-$font-size           : 15px;
-$font-size-lg        : 16px;
-$font-weight         : normal;
-$letter-spacing      : normal;
-$line-height         : normal;
-$line-height-lg      : normal;
+$font-size : 1rem;
+$font-weight : normal;
+$letter-spacing : normal;
+$line-height : 1.2;
 
 /* Screen sizes */
-$grid-breakpoints: (xs: 0,
-    sm: 320px,
+$grid-breakpoints: (sm: 320px,
     md: 768px,
     lg: 1280px,
     xl: 1920px);
-
-$container-max-widths: (xs: 100%,
-    sm: 100%,
+$container-max-widths: (sm: 100%,
     md: 100%,
     lg: 1170px,
     xl: 1170px);
-$container-paddings: (xs: 25px,
-    sm: 25px,
+$container-paddings: (sm: 25px,
     md: 50px,
     lg: 0,
     xl: 0);
-$column-gaps: (xs: 12px,
-    sm: 12px,
-    md: 26px,
-    lg: 48px,
-    xl: 62px);
+$column-gaps: (sm: 12px,
+    md: 24px,
+    lg: 36px,
+    xl: 48px);
+
+/* block margins */
+$block-margins: (sm: 1rem,
+    md: 2rem,
+    lg: 3rem,
+    xl: 4rem,
+);
+$block-margins-sm: (sm: .5rem,
+    md: 1rem,
+    lg: 1.5rem,
+    xl: 2rem,
+);

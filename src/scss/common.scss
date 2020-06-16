@@ -14,5 +14,17 @@
 // @import "generated/svgsprites";
 @import "fonts";
 
-// Components
-@import "components/content";
+// Base components
+@import "components/base/bk";
+@import "components/base/block";
+@import "components/base/btn";
+@import "components/base/content";
+@import "components/base/dev";
+@import "components/base/form";
+@import "components/base/footer";
+@import "components/base/header";
+@import "components/base/input";
+@import "components/base/menu-toggler";
+@import "components/base/rte";
+
+// Project components
