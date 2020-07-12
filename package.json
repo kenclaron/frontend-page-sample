@@ -1,7 +1,7 @@
 {
     "name": "frontend-pack",
     "author": "riverstart.ru",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "repository": {
         "type": "git",
         "url": "git.riverstart.ru/kirusanov/frontend-pack.git"
@@ -10,7 +10,17 @@
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
-        "sprites": "gulp sprites",
+        "clean": "gulp clean",
+        "svgsprites": "gulp svgsprites",
+        "pngsprites": "gulp pngsprites",
+        "static": "gulp static",
+        "styles": "gulp styles",
+        "views": "gulp views",
+        "scripts": "gulp scripts",
+        "images": "gulp images",
+        "webp": "gulp webp",
+        "serve": "gulp serve",
+
         "jslint": "eslint src/js/**"
     },
     "browserslist": [
@@ -64,6 +74,7 @@
         "imagemin-pngquant": "^8.0.0",
         "imagemin-webp": "^5.1.0",
         "imagemin-zopfli": "^6.0.0",
+        "require-dir": "^1.2.0",
         "uglifyjs-webpack-plugin": "^2.1.1",
         "webpack-stream": "^5.2.1",
         "yargs": "^15.1.0"

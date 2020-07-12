@@ -1,0 +1,12 @@
+.svgsprite {
+    display:inline-block;
+    width:1em;
+    height:1em;
+    fill:currentColor;
+    vertical-align:middle;
+
+    &._mine {
+    	font-size:(481.029/10)*1rem;
+    	width:(481.029/481.029)*1em;
+    }
+}
