@@ -49,7 +49,7 @@ let app = {
         window.app = app;
 
         app.document.ready(() => {
-            this.initScrollTo();
+            this.initScrollTo(); // for example
         });
 
         // app.window.on('load', () => {
@@ -60,7 +60,7 @@ let app = {
 
     },
 
-    initScrollTo: function () {
+    initScrollTo() {
         app.document.on('click', '.js-scrollto', function () {
             let target = $(this).data('href');
             if (target) {
@@ -74,11 +74,11 @@ let app = {
         });
     },
 
-    formatPrice: function (price) {
+    formatPrice(price) {
         return this.formatNumber(price, 0, ',', ' ');
     },
 
-    formatNumber: function (number, decimals, dec_point, thousands_sep) {
+    formatNumber(number, decimals, dec_point, thousands_sep) {
         // original by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
         // improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
         // bugfix by: Michael White (http://crestidg.com)
@@ -118,7 +118,7 @@ let app = {
      * Проверяет размер окна и пишет его в app.media
      * @returns void
      */
-    checkMedia: function () {
+    checkMedia() {
         let current = app.media;
         for (let key in app.breakpoints) {
             if (app.window.outerWidth() >= app.breakpoints[key]) {
@@ -131,7 +131,7 @@ let app = {
         }
     },
 
-    uniqID: function () {
+    uniqID() {
         return `app_id_${app.currentID++}`;
     },
 
@@ -144,7 +144,7 @@ let app = {
      * 
      * https://habrahabr.ru/post/105428/
      */
-    getNumEnding: function (iNumber, aEndings) {
+    getNumEnding(iNumber, aEndings) {
         let sEnding, i;
         iNumber = iNumber % 100;
         if (iNumber >= 11 && iNumber <= 19) {
@@ -168,7 +168,7 @@ let app = {
         return sEnding;
     },
 
-    getKeyByValue: function (object, value) {
+    getKeyByValue(object, value) {
         return Object.keys(object).find(key => object[key] === value);
     }
 

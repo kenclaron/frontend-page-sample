@@ -14,10 +14,18 @@
 * установите `gulp` глобально: `yarn global add gulp-cli`;
 * перейдите в скачанную папку со сборкой: `cd frontend-pack`;
 * введите команду, которая скачает необходимые компоненты для корректной работы нашей сборки, указанные в файле `package.json`: `yarn`;
-* введите команду: `yarn run dev` (режим разработки);
-* чтобы окончательно завершить проект, введите команду `yarn run build`.
+* введите команду: `yarn dev` (режим разработки);
+* чтобы «собрать» проект, введите команду `yarn build`.
 
 Если вы всё сделали правильно, у вас должен открыться браузер с локальным сервером и работающим `browser-sync`.
+
+## Предустановленные пакеты
+Удалите ненужные
+* [fancybox](http://fancyapps.com/fancybox/3/)
+* [inputmask](https://github.com/RobinHerbots/Inputmask)
+* [jquery](https://api.jquery.com/)
+* [lazysizes](https://github.com/aFarkas/lazysizes)
+* [swiper](https://swiperjs.com/)
 
 ## Плагины
 * [gulp-if](https://www.npmjs.com/package/gulp-if) - запуск заданий только тогда, когда это нужно;
@@ -32,7 +40,6 @@
 * [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) - карта стилей;
 * [gulp-rename](https://www.npmjs.com/package/gulp-rename) — переименование файлов, добавление суффиксов и префиксов (например, добавление суффикса `.min` к минифицированным файлам);
 * [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) — сжатие изображений PNG, JPG, GIF и SVG (включая дополнительные плагины для оптимизации);
-* [gulp-favicons](https://github.com/evilebottnawi/favicons) — генератор фавиконок для вашего проекта;
 * [gulp-svg-sprites](https://www.npmjs.com/package/gulp-svg-sprites) — создание SVG-спрайтов;
 * [gulp-replace](https://www.npmjs.com/package/gulp-replace) - замена строк;
 * [gulp-plumber](https://www.npmjs.com/package/gulp-plumber) — оповещения в командной строке (например, ошибки в SCSS/Sass);
@@ -57,7 +64,7 @@ frontend-pack
 └── src Исходные файлы
     ├── icons Исходники svg-спрайта
     └── js js-файлы
-        └── libs Сторонние библиотеки, которые не получается подключть динамически
+        └── libs Сторонние библиотеки, которые не получается подключить динамически
     ├── locales Языковые файлы
     └── scss
         ├── components Самодостаточные компоненты

@@ -20,12 +20,11 @@
     "dependencies": {
         "@fancyapps/fancybox": "3.x",
         "browser-detect": "^0.2.28",
-        "fastclick": "1.x",
         "inputmask": "^5.0.3",
         "jquery": "3.x",
         "lazysizes": "5.x",
         "svg4everybody": "2.x",
-        "swiper": "^5.3.0"
+        "swiper": "^6.0.2"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0",
@@ -45,7 +44,6 @@
         "gulp-clean-css": "^4.2.0",
         "gulp-concat": "^2.6.1",
         "gulp-debug": "^4.0.0",
-        "gulp-favicons": "^2.2.7",
         "gulp-filter": "^6.0.0",
         "gulp-if": "^3.0.0",
         "gulp-imagemin": "^7.1.0",
