@@ -1,7 +1,7 @@
 {
     "name": "frontend-pack",
     "author": "riverstart.ru",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "repository": {
         "type": "git",
         "url": "git.riverstart.ru/kirusanov/frontend-pack.git"
@@ -21,7 +21,8 @@
         "webp": "gulp webp",
         "serve": "gulp serve",
         "jslint": "eslint src/js/**",
-        "jslint --fix": "eslint --fix --color src/js/**"
+        "jslint --fix": "eslint --fix --color src/js/**",
+        "validate-html": "gulp validate-html"
     },
     "browserslist": [
         "since 2017",
@@ -66,6 +67,7 @@
         "gulp-spritesmash": "^1.1.1",
         "gulp-svg-sprite": "^1.5.0",
         "gulp-uglify": "^3.0.0",
+        "gulp-w3c-html-validator": "^2.0.1",
         "gulp-watch": "^5.0.0",
         "gulp-webp": "^4.0.1",
         "gulp.spritesmith": "^6.11.0",
