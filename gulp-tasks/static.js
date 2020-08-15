@@ -11,12 +11,6 @@ gulp.task('static', (done) => {
     });
     gulp.src(paths.src.static)
         .pipe(gulp.dest(paths.build.static));
-    gulp.src(['./src/scss/vendor/**/*'])
-        .pipe(gulp.dest(`${paths.build.styles}vendor/`));
-    gulp.src(['./src/scss/fonts/**/*'])
-        .pipe(gulp.dest(`${paths.build.styles}fonts/`));
-    gulp.src(['./src/scss/img/**/*'])
-        .pipe(gulp.dest(`${paths.build.styles}img/`));
     browsersync.reload();
     done();
 });

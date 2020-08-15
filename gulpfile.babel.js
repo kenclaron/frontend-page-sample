@@ -66,7 +66,7 @@ export const development = series(
     'clean',
     'svgsprites',
     'pngsprites',
-    parallel('views', 'styles', 'scripts', 'static', 'images', 'webp'),
+    parallel('views', 'styles', 'scripts', 'static', 'stylesstatic', 'images', 'webp'),
     'serve'
 );
 
@@ -75,6 +75,7 @@ export const prod = series(
     'svgsprites',
     'pngsprites',
     'static',
+    'stylesstatic',
     'views',
     'styles',
     'scripts',

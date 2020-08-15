@@ -15,6 +15,7 @@ gulp.task('serve', () => {
     gulp.watch(paths.src.stylesWatch, gulp.parallel('styles'));
     gulp.watch(paths.src.scriptsWatch, gulp.parallel('scripts'));
     gulp.watch(paths.src.static, gulp.parallel('static'));
+    gulp.watch(paths.src.stylesStatic, gulp.parallel('stylesstatic'));
     gulp.watch(paths.src.icons, gulp.parallel('svgsprites'));
     gulp.watch(paths.src.sprites, gulp.parallel('pngsprites'));
     gulp.watch(paths.src.images, gulp.parallel('images'));

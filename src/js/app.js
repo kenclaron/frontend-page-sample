@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'lazysizes';
-// import Swiper from 'swiper/js/swiper.js';
+// import Swiper from 'swiper/bundle';
 
 import page from 'page';
 import forms from 'forms';
@@ -21,7 +21,7 @@ let app = {
     popupClosedEventName: 'app_popup_closed',
     tabChangedEventName: 'app_tab_changed',
     scrollToOffset: 200, // оффсет при скролле до элемента
-    scrollToSpeed: 500, // скорость скролла 
+    scrollToSpeed: 500, // скорость скролла
 
     init: function () {
         // read config
@@ -141,7 +141,7 @@ let app = {
      * param  aEndings Array Массив слов или окончаний для чисел (1, 4, 5),
      *         например ['яблоко', 'яблока', 'яблок']
      * return String
-     * 
+     *
      * https://habrahabr.ru/post/105428/
      */
     getNumEnding(iNumber, aEndings) {
