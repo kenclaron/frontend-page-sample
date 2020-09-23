@@ -31,3 +31,39 @@ gulp.task('svgsprites', () => {
         }))
         .on('end', browsersync.reload);
 });
+
+// import cheerio from "gulp-cheerio";
+// import svgmin from "gulp-svgmin";
+// import replace from "gulp-replace";
+
+// gulp.task('svgsprites', () => {
+//     return gulp.src(paths.src.icons)
+//         .pipe(
+//             svgmin({
+//                 js2svg: {
+//                     pretty: true,
+//                 },
+//             })
+//         )
+//         .pipe(
+//             cheerio({
+//                 run: function ($) {
+//                     $("[fill]").removeAttr("fill");
+//                     $("[stroke]").removeAttr("stroke");
+//                     $("[style]").removeAttr("style");
+//                 },
+//                 parserOptions: {
+//                     xmlMode: true,
+//                 },
+//             })
+//         )
+
+//         .pipe(replace("&gt;", ">"))
+//         .pipe(svgSprite(svgSpriteOptions))
+//         .pipe(replace(' stroke-width="2"', ""))
+//         .pipe(gulp.dest(paths.build.general))
+//         .pipe(debug({
+//             'title': 'SVG-sprites'
+//         }))
+//         .on('end', browsersync.reload);
+// });

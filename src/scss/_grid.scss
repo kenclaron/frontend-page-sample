@@ -195,7 +195,7 @@ $container-padding in $container-paddings {
 
   @each $breakpoint,
   $gutter in $column-gaps {
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
       padding-right: $gutter / 2;
       padding-left : $gutter / 2;
     }

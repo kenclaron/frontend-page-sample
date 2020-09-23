@@ -18,6 +18,17 @@
     @include make-container();
 }
 
+@if $enable-grid-classes {
+    .row {
+        @include make-row();
+
+        >* {
+            @include make-col-ready();
+        }
+    }
+    @include make-grid-columns();
+}
+
 .hidden {
     display: none !important;
 
@@ -34,9 +45,11 @@
     &-nowrap {
         white-space: nowrap;
     }
+
     &-muted {
         color: rgba($color-text, .5);
     }
+
     &-uppercase {
         text-transform: uppercase;
     }
@@ -45,6 +58,7 @@
 .color-primary {
     color: $color-primary !important;
 }
+
 .color-secondary {
     color: $color-secondary !important;
 }
@@ -55,6 +69,7 @@ a,
     color: $link-color;
     text-decoration: underline solid rgba($color-text, .5);
     @include transition((color, text-decoration-color));
+
     @include hover-desktop {
         color: $link-hover-color;
         text-decoration-color: rgba($link-hover-color, .5);

@@ -49,10 +49,6 @@ $container-paddings: (sm: 25px,
     md: 50px,
     lg: 0,
     xl: 0);
-$column-gaps: (sm: 12px,
-    md: 24px,
-    lg: 36px,
-    xl: 48px);
 
 /* block margins */
 $block-margins: (sm: 1rem,
@@ -65,3 +61,11 @@ $block-margins-sm: (sm: .5rem,
     lg: 1.5rem,
     xl: 2rem,
 );
+
+/* Grid */
+$enable-grid-classes: true;
+$grid-columns: 12;
+$column-gaps: (sm: 12px,
+    md: 24px,
+    lg: 36px,
+    xl: 48px);
