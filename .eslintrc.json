@@ -21,6 +21,7 @@
         "strict": ["error", "global"],
         "semi": ["error", "always"],
         "quotes": ["warn", "single"],
-        "no-var": ["error"]
+        "no-var": ["error"],
+        "no-unused-vars": ["error", { "args": "none" }]
     }
 }

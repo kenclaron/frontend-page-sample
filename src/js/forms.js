@@ -30,15 +30,34 @@ let forms = {
             }
         });
     },
-    
+
     initMask() {
-        let selector = document.querySelectorAll('.js-mask__tel');
+        const selector = document.querySelectorAll('input[name="tel"]');
+        // простой вариант
+        // Inputmask({
+        //     mask: '+7 (999) 999 99 99',
+        //     showMaskOnHover: false,
+        // }).mask(selector);
+        // подмена восьмерки, подстановка +7, городские номера
         Inputmask({
-            mask: '+7 (999) 999 99 99',
+            mask: '+7 (999) 999-99-99',
+            postValidation: function (buffer, pos, c, currentResult, opts, maskset, strict, fromCheckval) {
+                // console.log(pos, c)
+                if (pos === 0 && ['0', '8'].indexOf(c) !== -1) {
+                    return {
+                        remove: 4
+                    };
+                }
+                if (pos === 4 && c === '0') {
+                    return false;
+                }
+                return true;
+            },
             showMaskOnHover: false,
+            jitMasking: true,
         }).mask(selector);
     },
-    
+
 };
 
 export default forms;

@@ -74,6 +74,62 @@ let app = {
         });
     },
 
+    initTabs() {
+        $('.js-tabs').each(function () {
+            let $wrapper = $(this);
+            let $targetWrapper = $wrapper.find('.js-tabs__wrapper');
+            let $triggers = $wrapper.find('.js-tabs__trigger[data-href]');
+            if (!$triggers.length) {
+                return;
+            }
+            if (!$triggers.filter('._active').length) {
+                $triggers.first().addClass('_active');
+            }
+            $triggers.filter(':not(._active)').each(function () {
+                $($(this).data('href')).hide();
+            });
+            $triggers.filter('._active').each(function () {
+                $($(this).data('href')).addClass('_active');
+            });
+            $triggers.on('click', function () {
+                if ($(this).hasClass('_active')) {
+                    return;
+                }
+                let href = $(this).data('href');
+                let $target = $(href);
+                if (!$target.length) {
+                    return;
+                }
+                $triggers.removeClass('_active');
+                $(this).addClass('_active');
+                let $parent = $(this).parent();
+                $parent.animate({
+                    scrollLeft: $parent.scrollLeft() + $(this).position().left - parseInt($parent.css('padding-left')),
+                });
+                let $current = $wrapper.find('.js-tabs__target._active');
+                $targetWrapper.css('height', $current.outerHeight());
+                $current.fadeOut();
+                $target.css({
+                    visibility: 'hidden',
+                    display: 'block'
+                });
+                let targetHeight = $target.outerHeight();
+                $target.css({
+                    display: 'none',
+                    visibility: 'visible'
+                });
+                $targetWrapper.animate({ height: targetHeight }, () => {
+                    $target.fadeIn(() => {
+                        $current.removeClass('_active');
+                        $target.addClass('_active');
+                        $targetWrapper.css('height', 'auto');
+                    });
+                });
+            });
+
+        });
+    },
+
     formatPrice(price) {
         return this.formatNumber(price, 0, ',', ' ');
     },
