@@ -32,7 +32,7 @@ let forms = {
     },
 
     initMask() {
-        const selector = document.querySelectorAll('input[name="tel"]');
+        const selector = document.querySelectorAll('input[type="tel"]');
         // простой вариант
         // Inputmask({
         //     mask: '+7 (999) 999 99 99',
