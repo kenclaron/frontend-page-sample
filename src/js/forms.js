@@ -13,7 +13,7 @@ let forms = {
     },
 
     initInputLabel() {
-        let sel = '.js-label input:not([required]), .js-label textarea:not([required])';
+        let sel = '.js-label input, .js-label textarea';
         let className = '_label-empty';
         this.app.document
             .on('focus', sel, function () {

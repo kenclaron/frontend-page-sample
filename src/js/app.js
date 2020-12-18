@@ -39,14 +39,14 @@ let app = {
         this.page = page;
         this.page.init.call(this);
 
-        // Init page
-        this.forms = forms;
-        this.forms.init.call(this);
-
         app.checkMedia();
         app.window.on('resize', app.checkMedia);
         window.jQuery = $;
         window.app = app;
+
+        // Init forms
+        this.forms = forms;
+        this.forms.init.call(this);
 
         app.document.ready(() => {
             this.initScrollTo(); // for example
