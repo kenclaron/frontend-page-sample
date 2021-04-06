@@ -58,6 +58,8 @@ let app = {
         // this.document.on(app.resizeEventName, () => {
         // });
 
+        app.body.addClass('_init');
+
     },
 
     initScrollTo() {

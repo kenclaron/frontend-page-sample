@@ -12,9 +12,6 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
     margin: 0;
     background-color: #fff;
     line-height: 1;
@@ -344,8 +341,4 @@ svg {
 
 .contain-pic {
     object-fit: contain;
-}
-
-.footer {
-    margin-top: auto;
 }

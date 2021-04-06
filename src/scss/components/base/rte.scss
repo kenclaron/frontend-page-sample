@@ -6,11 +6,10 @@
     }
 
     >* {
-        margin-bottom: 1.5rem;
         break-inside: avoid;
 
-        &:last-child {
-            margin-bottom: 0;
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
         }
     }
 
@@ -18,15 +17,14 @@
     ol {
         li {
             padding-left: 1rem;
-            margin-bottom: .5rem;
 
             &:before {
                 position: absolute;
                 left: 0;
             }
 
-            &:last-child {
-                margin-bottom: 0;
+            &:not(:last-child) {
+                margin-bottom: .5rem;
             }
         }
     }
