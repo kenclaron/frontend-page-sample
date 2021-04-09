@@ -7,9 +7,10 @@
 
     >* {
         break-inside: avoid;
+        margin-bottom: 1.5rem;
 
-        &:not(:last-child) {
-            margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
