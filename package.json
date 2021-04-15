@@ -57,6 +57,8 @@
         "gulp-debug": "^4.0.0",
         "gulp-filter": "^6.0.0",
         "gulp-group-css-media-queries": "^1.2.2",
+        "gulp-iconfont": "^11.0.0",
+        "gulp-iconfont-css": "^3.0.0",
         "gulp-if": "^3.0.0",
         "gulp-imagemin": "^7.1.0",
         "gulp-plumber": "^1.2.0",

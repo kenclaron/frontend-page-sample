@@ -12,6 +12,7 @@ gulp.task('serve', () => {
         notify: false
     });
     gulp.watch(paths.src.pug, gulp.parallel('views'));
+    gulp.watch(paths.src.iconfont, gulp.parallel('iconfont'));
     gulp.watch(paths.src.stylesWatch, gulp.parallel('styles'));
     gulp.watch(paths.src.scriptsWatch, gulp.parallel('scripts'));
     gulp.watch(paths.src.static, gulp.parallel('static'));

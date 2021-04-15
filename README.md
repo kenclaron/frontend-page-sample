@@ -16,7 +16,7 @@
 
 > Yarn - это современная альтернатива npm. Yarn работает с тем же файлом `package.json` и так же скачивает необходимые модули в папку `node_modules`, но делает это намного быстрее.
 
-* скачайте сборку: `git clone http://148.251.115.93/kirusanov/frontend-pack.git`;
+* скачайте сборку: `git clone http://git.riverstart.ru/kirusanov/frontend-pack.git`;
 * установите `gulp` глобально: `yarn global add gulp-cli`;
 * перейдите в скачанную папку со сборкой: `cd frontend-pack`;
 * введите команду, которая скачает необходимые компоненты для корректной работы нашей сборки, указанные в файле `package.json`: `yarn`;
@@ -52,6 +52,7 @@
 * [gulp-debug](https://www.npmjs.com/package/gulp-debug) — отладка в терминале;
 * [gulp-watch](https://www.npmjs.com/package/gulp-watch) — отслеживание изменений в ваших файлах проекта;
 * [gulp-clean](https://www.npmjs.com/package/gulp-clean) — удаление файлов и папок;
+* [gulp-iconfont](https://www.npmjs.com/package/gulp-iconfont) — Create SVG/TTF/EOT/WOFF/WOFF2 fonts from several SVG icons with Gulp;
 * [yargs](https://www.npmjs.com/package/yargs) - получение аргументов командной строки в Node.js.
 
 ### Сборка проекта в режиме разработки
@@ -68,6 +69,7 @@ frontend-pack
 │       ├── js Скомпилированные js
 │       └── css Скомпилированные css
 └── src Исходные файлы
+    ├── iconfont Исходники иконочного шрифта (svg)
     ├── icons Исходники svg-спрайта
     └── js js-файлы
         └── libs Сторонние библиотеки, которые не получается подключить динамически
@@ -75,9 +77,9 @@ frontend-pack
     └── scss
         ├── components Самодостаточные компоненты
         ├── fonts Шрифты
-        ├── generated Сгенерированный спрайты
+        ├── generated Сгенерированный спрайты и стили шрифтов
         ├── img Изображения, используемые в стилях
-        ├── templates Шаблоны спрайтов
+        ├── templates Шаблоны спрайтов и шрифтов
         └── vendor Сторонние библиотеки
     ├── sprites Исходники png-спрайта (используйте @2 в названии для двойной плотности)
     └── static Статические файлы

@@ -15,6 +15,10 @@ global.isDev = !production;
 const requireDir = require("require-dir");
 
 export const paths = {
+    generated: './src/scss/generated/',
+    templates: {
+        iconfont: './src/scss/templates/iconfont.scss',
+    },
     src: {
         pug: [
             './src/views/**/*.pug'
@@ -28,6 +32,7 @@ export const paths = {
             './src/static/**/*',
             '!./src/static/img/**/*',
         ],
+        iconfont: './src/iconfont/*.svg',
         sprites: './src/sprites/*',
         icons: './src/icons/*.svg',
         svgsprites: {
@@ -46,10 +51,11 @@ export const paths = {
         static: './dist/assets/',
         styles: './dist/assets/css/',
         scripts: './dist/assets/js/',
-        
+
         images: './dist/assets/img/',
         webp: './dist/assets/img/',
         sprites: './dist/assets/css/img/sprites/',
+        iconfont: './dist/assets/css/fonts/',
     }
 };
 
@@ -66,7 +72,7 @@ export const development = series(
     'clean',
     'svgsprites',
     'pngsprites',
-    parallel('views', 'styles', 'scripts', 'static', 'stylesstatic', 'images', 'webp'),
+    parallel('views', 'iconfont', 'styles', 'scripts', 'static', 'stylesstatic', 'images', 'webp'),
     'serve'
 );
 
@@ -77,6 +83,7 @@ export const prod = series(
     'static',
     'stylesstatic',
     'views',
+    'iconfont',
     'styles',
     'scripts',
     'images',
