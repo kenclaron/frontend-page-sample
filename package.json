@@ -22,7 +22,8 @@
         "serve": "gulp serve",
         "jslint": "eslint src/js/**",
         "jslint --fix": "eslint --fix --color src/js/**",
-        "validate-html": "gulp validate-html"
+        "validate-html": "gulp validate-html",
+        "critical": "gulp critical"
     },
     "browserslist": [
         "since 2017",
@@ -45,6 +46,7 @@
         "babel-eslint": "^10.0.3",
         "babel-loader": "^8.0.5",
         "browser-sync": "^2.23.6",
+        "critical": "^4.0.0",
         "eslint": "^6.8.0",
         "eslint-loader": "^3.0.3",
         "fancy-log": "^1.3.3",

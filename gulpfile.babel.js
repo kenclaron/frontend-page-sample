@@ -44,6 +44,7 @@ export const paths = {
             './src/static/img/**/*.{jpg,jpeg,png,gif,svg}',
         ],
         webp: './src/static/img/**/*.{jpg,jpeg,png}',
+        critical: './dist/*.html',
     },
     build: {
         clean: ['./dist/*'],
@@ -56,6 +57,7 @@ export const paths = {
         webp: './dist/assets/img/',
         sprites: './dist/assets/css/img/sprites/',
         iconfont: './dist/assets/css/fonts/',
+        critical: './dist/assets/css/critical/',
     }
 };
 
