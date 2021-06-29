@@ -26,8 +26,9 @@
         "critical": "gulp critical"
     },
     "browserslist": [
-        "since 2017",
-        "last 2 versions"
+        "last 3 versions",
+		"> 1%",
+		"not ie > 0"
     ],
     "dependencies": {
         "@fancyapps/fancybox": "3.x",
