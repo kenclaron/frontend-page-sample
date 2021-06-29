@@ -9,7 +9,14 @@ gulp.task('serve', () => {
         server: paths.build.general,
         port: 9000,
         tunnel: false,
-        notify: false
+        notify: false,
+        middleware: function (req, res, next) {
+            if (/\.json|\.txt|\.html/.test(req.url) && req.method.toUpperCase() == 'POST') {
+                console.log('[POST => GET] : ' + req.url);
+                req.method = 'GET';
+            }
+            next();
+        },
     });
     gulp.watch(paths.src.pug, gulp.parallel('views'));
     gulp.watch(paths.src.iconfont, gulp.parallel('iconfont'));

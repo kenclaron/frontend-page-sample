@@ -9,9 +9,11 @@ import imageminPngquant from 'imagemin-pngquant';
 import imageminZopfli from 'imagemin-zopfli';
 import imageminMozjpeg from 'imagemin-mozjpeg';
 import gulpif from 'gulp-if';
+import cache from 'gulp-cached';
 
 gulp.task('images', () => {
     return gulp.src(paths.src.images)
+        .pipe(gulpif(!production, cache('webp')))
         .pipe(gulpif(production, imagemin([
             imageminPngquant({
                 speed: 5,

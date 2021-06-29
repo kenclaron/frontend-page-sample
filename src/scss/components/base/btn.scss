@@ -9,6 +9,7 @@
     @include transition((background-color, opacity));
     background-color: $color-gray;
     line-height: 3rem;
+    cursor: pointer;
 
     @include media-breakpoint-up(md) {
         width: auto;
