@@ -13,7 +13,7 @@ import cache from 'gulp-cached';
 
 gulp.task('images', () => {
     return gulp.src(paths.src.images)
-        .pipe(gulpif(!production, cache('webp')))
+        .pipe(gulpif(!production, cache('images')))
         .pipe(gulpif(production, imagemin([
             imageminPngquant({
                 speed: 5,
