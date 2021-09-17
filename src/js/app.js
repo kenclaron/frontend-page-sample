@@ -20,8 +20,7 @@ let app = {
     popupLoadedEventName: 'app_popup_loaded',
     popupClosedEventName: 'app_popup_closed',
     tabChangedEventName: 'app_tab_changed',
-    scrollToOffset: 200, // оффсет при скролле до элемента
-    scrollToSpeed: 500, // скорость скролла
+    scrollToOffset: 100, // оффсет при скролле до элемента
 
     init: function () {
         // read config
@@ -63,15 +62,15 @@ let app = {
     },
 
     initScrollTo() {
-        app.document.on('click', '.js-scrollto', function () {
-            let target = $(this).data('href');
+        document.querySelectorAll('[data-scroll]').forEach(el => {
+            let target = document.querySelector(el.dataset.scroll);
             if (target) {
-                let $target = $(target);
-                if ($target.length) {
-                    $('html, body').animate({
-                        scrollTop: $target.offset().top - app.scrollToOffset
-                    }, app.scrollToSpeed);
-                }
+                el.addEventListener('click', () => {
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - app.scrollToOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    app.body.removeClass('menu-opened');
+                    return false;
+                });
             }
         });
     },

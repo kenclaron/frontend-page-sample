@@ -9,6 +9,7 @@ import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 
 const fontname = 'iconfont';
+const runTimestamp = Math.round(Date.now() / 1000);
 
 gulp.task('iconfont', () => {
     return gulp.src(paths.src.iconfont)
@@ -17,12 +18,13 @@ gulp.task('iconfont', () => {
             path: paths.templates.iconfont,
             targetPath: `${fontname}.scss`,
             fontPath: `../css/fonts/${fontname}/`,
+            cacheBuster: runTimestamp,
         }))
         .pipe(iconfont({
             fontName: fontname,
             prependUnicode: false,
             formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
-            timestamp: Math.round(Date.now() / 1000),
+            timestamp: runTimestamp,
         }))
         // .on('glyphs', function (glyphs, options) {
         //     // CSS templating, e.g.

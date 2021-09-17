@@ -7,6 +7,12 @@ block config
 block content
     .container
         .block
+            ul.dev-menu
+                li.dev-menu__item
+                    a(href="#" data-scroll="#rte") Scroll
+                //-li.dev-menu__item
+                    span.link.js-popup(data-href="#login") Авторизация
+        .block
             pre .block
         .block._mb-none
             pre .block._mb-none
@@ -60,7 +66,7 @@ block content
                 span.bk__item
                     a(href="#") span.bk__item a(href="#")
                 span.bk__item span.bk__item
-        .block
+        #rte.block
             pre div.rte
             .rte
                 h3 Title H3
@@ -77,6 +83,9 @@ block content
                     li Three
                     li Four
                 p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
+                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
+                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
+                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
         .row
             .col-sm-12.col-md-4.col-lg-6
                 .dev-col .col-sm-12.col-md-4.col-lg-6
@@ -84,10 +93,3 @@ block content
                 .dev-col .col-sm-12.col-md-4.col-lg-3
             .col-sm-12.col-md-4.col-lg-3
                 .dev-col .col-sm-12.col-md-4.col-lg-3
-        //ul.dev-menu
-            li.dev-menu__item
-                a(href="main.html") Главная
-            li.dev-menu__item
-                span.link.js-popup(data-href="#login") Авторизация
-            li.dev-menu__item
-                span.link.js-popup(data-href="#register") Регистрация
