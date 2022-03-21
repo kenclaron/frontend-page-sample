@@ -10,7 +10,6 @@ import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import mincss from 'gulp-clean-css';
 import sourcemaps from 'gulp-sourcemaps';
-import gcmq from 'gulp-group-css-media-queries';
 
 gulp.task('styles', () => {
     return gulp.src(paths.src.stylesBuild)
@@ -18,7 +17,6 @@ gulp.task('styles', () => {
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(sass()).on('error', errorHandler('styles', 'sass'))
         .pipe(gulpif(production, autoprefixer()))
-        .pipe(gcmq())
         .pipe(gulpif(production, mincss({
             compatibility: '*', level: {
                 1: {

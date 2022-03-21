@@ -27,8 +27,8 @@
     },
     "browserslist": [
         "last 3 versions",
-		"> 1%",
-		"not ie > 0"
+        "> 1%",
+        "not ie > 0"
     ],
     "dependencies": {
         "@fancyapps/fancybox": "3.x",
@@ -60,7 +60,6 @@
         "gulp-concat": "^2.6.1",
         "gulp-debug": "^4.0.0",
         "gulp-filter": "^6.0.0",
-        "gulp-group-css-media-queries": "^1.2.2",
         "gulp-iconfont": "^11.0.0",
         "gulp-iconfont-css": "^3.0.0",
         "gulp-if": "^3.0.0",
