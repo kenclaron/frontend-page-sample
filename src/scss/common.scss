@@ -2,12 +2,6 @@
 @import "variables";
 @import "custom-reset";
 
-// External
-// @import "vendor/jquery.fancybox.css";
-// @import "node_modules/swiper/swiper.scss";
-// @import "node_modules/swiper/components/pagination/pagination.scss";
-// @import "node_modules/swiper/components/navigation/navigation.scss";
-
 // Base
 @import "grid";
 @import "mixins";
@@ -16,6 +10,12 @@
 // @import "generated/sprites";
 // @import "generated/svgsprites";
 @import "fonts";
+
+// External
+// @import "vendor/jquery.fancybox.css";
+// @import "node_modules/swiper/swiper.scss";
+// @import "node_modules/swiper/components/pagination/pagination.scss";
+// @import "node_modules/swiper/components/navigation/navigation.scss";
 
 // Base components
 @import "components/base/bk";
