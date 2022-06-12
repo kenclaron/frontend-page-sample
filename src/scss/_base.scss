@@ -1,3 +1,7 @@
+html {
+    font-size: $font-size;
+}
+
 .body {
     display: flex;
     flex-direction: column;
@@ -10,27 +14,10 @@
     font-size: $font-size;
     letter-spacing: $letter-spacing;
     line-height: $line-height;
-
-    &._frozen {
-        overflow: hidden;
-        height: 100%;
-    }
-
 }
 
 .container {
     @include make-container();
-}
-
-@if $enable-grid-classes {
-    .row {
-        @include make-row();
-
-        >* {
-            @include make-col-ready();
-        }
-    }
-    @include make-grid-columns();
 }
 
 .hidden {
@@ -38,10 +25,28 @@
 
     @each $key in (md, lg, xl) {
         &-#{$key} {
-            @include media-breakpoint-up($key) {
+            @include up($key) {
                 display: none !important;
             }
         }
+    }
+}
+
+.visible-xl {
+    @include down(lg) {
+        display: none !important;
+    }
+}
+
+.visible-lg {
+    @include down(md) {
+        display: none !important;
+    }
+}
+
+.visible-md {
+    @include down(sm) {
+        display: none !important;
     }
 }
 
@@ -74,7 +79,7 @@ a,
     text-decoration: underline solid rgba($color-text, .5);
     @include transition((color, text-decoration-color));
 
-    @include hover-desktop {
+    @include hover {
         color: $link-hover-color;
         text-decoration-color: rgba($link-hover-color, .5);
     }
@@ -96,19 +101,6 @@ strong {
     display: none !important;
 }
 
-.ios-fixed {
-    @include media-breakpoint-down(sm) {
-        position: fixed;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-    }
-}
-
 .lazyload {
     visibility: hidden;
-}
-
-.fancybox-navigation {
-    position: static;
 }

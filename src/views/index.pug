@@ -2,38 +2,48 @@ extends _includes/layout
 
 block config
     - var pagetitle = 'Index'
-    - var bodyClass = 'dev'
+    //- использовать в крайнем случае
+    //- var bodyClass = ''
 
 block content
     .container
         .block
-            ul.dev-menu
-                li.dev-menu__item
-                    a(href="#" data-scroll="#rte") Scroll
-                //-li.dev-menu__item
-                    span.link.js-popup(data-href="#login") Авторизация
-        .block
-            pre .block
-        .block._mb-none
+            ul.demo-menu
+                li
+                    a(href="other-page.html") Other Page
+                li
+                    span.link.js-scrollto(data-target="#scroll") Scroll
+                li
+                    a(href="popup.html" data-fancybox data-type="ajax") Fancy Ajax Popup
+        .block._mb-none.demo-block
             pre .block._mb-none
-        .block._white._mb-small
-            pre .block._white._mb-small
-        .block
+        .block.demo-block
+            pre .block
+        .block 
             span.text-muted .text-muted
+            | 
             span.text-nowrap .text-nowrap
+            | 
             span.text-uppercase .text-uppercase
+            | 
             span.color-primary .color-primary
+            | 
             span.color-secondary .color-secondary
+            | 
             a(href="#") a
-            |
-            span.link span.link
+            | 
+            span.link .link
+            | 
             br
-            span(style="font-size: 2rem") Iconfont: 
+            span.demo-font font-family-alt
+        .block
+            pre i.icon-{name}
+            span(style="font-size:2rem")
                 i.icon-facebook 
                 i.icon-twitter 
                 i.icon-instagram 
                 i.icon-vk 
-        .block.dev-flex
+        .block.demo-flex
             button.btn .btn 
             button.btn(disabled) .btn(disabled)
             button.btn._primary .btn._primary
@@ -41,23 +51,18 @@ block content
             button.btn._secondary .btn._secondary
             button.btn._secondary(disabled) .btn._secondary(disabled)
         .block
-            form.form
-                .form__item
-                    .input.js-label
-                        input
-                        label .input.js-label input
-                .form__item
-                    .input._error.js-label
-                        input(required)
-                        label .input._error.js-label input(required)
-                .form__item
-                    .input.js-label
-                        input(disabled)
-                        label .input.js-label input(disabled)
-                .form__item
-                    .input.js-label
-                        input(type="tel").js-mask__tel
-                        label .input.js-label input.js-mask__tel(type="tel")
+            .input.js-label
+                input
+                label .input.js-label input
+            .input._error.js-label
+                input(required)
+                label .input._error.js-label input(required)
+            .input.js-label
+                input(disabled)
+                label .input.js-label input(disabled)
+            .input.js-label
+                input(type="tel").js-mask
+                label .input.js-label input.js-mask(type="tel")
         .block
             pre .bk
             p.bk
@@ -66,7 +71,15 @@ block content
                 span.bk__item
                     a(href="#") span.bk__item a(href="#")
                 span.bk__item span.bk__item
-        #rte.block
+        .block
+            pre +svgsprite("{name}")
+            +svgsprite("wikipedia")
+            +svgsprite("track")
+        .block
+            pre +pngsprite("{name}")
+            +pngsprite("insta-raz")
+            +pngsprite("insta-dva")
+        #scroll.block
             pre div.rte
             .rte
                 h3 Title H3
@@ -77,6 +90,10 @@ block content
                     li Three
                     li Four
                 p Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.
+                p 
+                    img(src="assets/img/lena.jpg" alt="")
+                    img(src="assets/img/transparency.png" alt="")
+                    img(src="assets/img/logo.svg" alt="")
                 ol
                     li One
                     li Two
@@ -86,10 +103,6 @@ block content
                 p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
                 p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
                 p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
-        .row
-            .col-sm-12.col-md-4.col-lg-6
-                .dev-col .col-sm-12.col-md-4.col-lg-6
-            .col-sm-12.col-md-4.col-lg-3
-                .dev-col .col-sm-12.col-md-4.col-lg-3
-            .col-sm-12.col-md-4.col-lg-3
-                .dev-col .col-sm-12.col-md-4.col-lg-3
+        .block
+            pre img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")
+            img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")

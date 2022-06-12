@@ -55,7 +55,7 @@
     //     height: 182px;
 
     //     /*line-height: 1.2;*/
-    //     @include media-breakpoint-up(md) {
+    //     @include up(md) {
     //         height: 220px;
     //     }
     // }
@@ -76,13 +76,13 @@
             top: 50% !important;
             transform: translateY(-50%) !important;
 
-            // @include media-breakpoint-up(md) {
+            // @include up(md) {
             //     top: 23px !important;
             // }
-            // @include media-breakpoint-up(lg) {
+            // @include up(lg) {
             //     font-size: 16px !important;
             // }
-            // @include media-breakpoint-up(xl) {
+            // @include up(xl) {
             //     font-size: 17px !important;
             // }
         }
@@ -98,14 +98,14 @@
     select:focus~label,
     select:valid+label {
         font-size: 60%;
-        top: 3px;
+        top: 4px;
         transform: none;
     }
 
     input:focus+._label-empty,
     textarea:focus+._label-empty {
         font-size: 60% !important;
-        top: 3px !important;
+        top: 4px !important;
     }
 
 }

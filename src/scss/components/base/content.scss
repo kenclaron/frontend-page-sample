@@ -6,7 +6,7 @@
     padding-top: map-get($header-height, sm) + 1rem;
 
     @each $key in (md, lg, xl) {
-        @include media-breakpoint-up($key) {
+        @include up($key) {
             padding-top: map-get($header-height, $key) + 1rem;
         }
     }

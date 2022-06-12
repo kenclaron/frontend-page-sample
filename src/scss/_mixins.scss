@@ -1,44 +1,22 @@
 /* common */
 
 @mixin transition($p) {
-    transition-property       : $p;
-    transition-duration       : $transition-duration;
+    transition-property: $p;
+    transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
 }
 
-@mixin row($gutter) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: - $gutter / 2;
-    margin-right: - $gutter / 2;
-}
-
-@mixin col($basis, $gutter) {
-    width: $basis;
-    padding-right: $gutter / 2;
-    padding-left: $gutter / 2;
-}
-
 @mixin border-inset($width, $color) {
-    box-shadow: inset $width 0 0 $color, 
-        inset 0 $width 0 $color, 
-        inset (-$width) 0 0 $color, 
+    box-shadow: inset $width 0 0 $color,
+        inset 0 $width 0 $color,
+        inset (-$width) 0 0 $color,
         inset 0 (-$width) 0 $color;
 }
 
-@mixin hover-desktop() {
-    @include media-breakpoint-up(lg) {
-        @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0){
-            &:hover {
-                @content
-            }
+@mixin hover() {
+    @media (hover) {
+        &:hover {
+            @content
         }
-    }
-}
-
-/*https://stackoverflow.com/questions/18907131/detecting-ie11-using-css-capability-feature-detection*/
-@mixin ie10up() {
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        @content
     }
 }

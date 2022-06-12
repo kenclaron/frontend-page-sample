@@ -1,10 +1,7 @@
-const config = require('./config.json');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const webpackConfig = {
-    entry: [
-        './src/js/app.js',
-    ],
+    entry: ['./src/js/app.js'],
 
     output: {
         path: __dirname,
@@ -15,58 +12,60 @@ const webpackConfig = {
     module: {
         rules: [
             // Не смог сделать, чтоб показывал ошибки, но собирал дальше
-//            {
-//                enforce: 'pre',
-//                test: /\.js$/,
-//                exclude: /(node_modules|bower_components|libs)/,
-//                loader: 'eslint-loader',
-//                options: {
-//                    emitError: false,
-//                    emitWarning: false,
-//                    failOnError: false,
-//                    failOnWarning: false,
-//                },
-//            },
+            //            {
+            //                enforce: 'pre',
+            //                test: /\.js$/,
+            //                exclude: /(node_modules|bower_components|libs)/,
+            //                loader: 'eslint-loader',
+            //                options: {
+            //                    emitError: false,
+            //                    emitWarning: false,
+            //                    failOnError: false,
+            //                    failOnWarning: false,
+            //                },
+            //            },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/,
                 options: {
-                    compact: true
-                }
-            }
-        ]
+                    compact: true,
+                },
+            },
+        ],
     },
 
     resolve: {
-        modules: ['./src/js', 'node_modules']
+        modules: ['./src/js', 'node_modules'],
     },
 
     optimization: {
         splitChunks: {
             chunks: 'all',
+            name: 'vendors',
         },
     },
 
     devtool: 'eval',
-};
+    mode: global.isDev ? 'development' : 'production',
+}
 
 if (!global.isDev) {
-    webpackConfig.devtool = config.prodmaps ? 'source-map' : false;
+    webpackConfig.devtool = false
     webpackConfig.plugins = [
         new UglifyJsPlugin({
-            sourceMap: config.prodmaps,
+            sourceMap: false,
             uglifyOptions: {
                 warnings: false,
                 drop_console: false,
                 ie8: false,
                 unsafe: true,
                 output: {
-                    comments: false
-                }
-            }
-        })
-    ];
+                    comments: false,
+                },
+            },
+        }),
+    ]
 }
 
-module.exports = webpackConfig;
+module.exports = webpackConfig

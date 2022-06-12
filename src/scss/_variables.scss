@@ -1,20 +1,20 @@
 /* Main Colors */
-$color-base : #171717;
-$color-white : #fff;
-$color-gray : #ccc;
-$color-primary : #E20210;
-$color-secondary : #0E3DB8;
+$color-base: #171717;
+$color-white: #fff;
+$color-gray: #ccc;
+$color-primary: #E20210;
+$color-secondary: #0E3DB8;
 
-$color-bg : #f8f8f8;
-$color-text : $color-base;
-$color-error : $color-primary;
+$color-bg: #f8f8f8;
+$color-text: $color-base;
+$color-error: $color-primary;
 $color-popup-background: $color-white;
 
-$color-overlay : $color-base;
+$color-overlay: $color-base;
 $opacity-overlay: .4;
 
-$link-color : $color-text;
-$link-hover-color : $color-primary;
+$link-color: $color-text;
+$link-hover-color: $color-primary;
 
 $transition-duration: .2s;
 $transition-timing-function: ease-in-out;
@@ -28,17 +28,18 @@ $header-height: (sm: 2rem,
 // $header-height-fixed: ;
 
 /* Fonts */
-$font-family : 'Fira Sans', sans-serif;
-$font-family-alt : sans-serif;
+$font-family: 'Fira Sans',
+sans-serif;
+$font-family-alt: serif;
 $font-family-icon: "iconfont";
 $font-family-fontello: "fontello";
-$font-size : 1rem;
-$font-weight : normal;
-$letter-spacing : normal;
-$line-height : 1.2;
+$font-size: 1rem;
+$font-weight: normal;
+$letter-spacing: normal;
+$line-height: 1.2;
 
 /* Screen sizes */
-$grid-breakpoints: (sm: 320px,
+$grid-breakpoints: (sm: 360px,
     md: 768px,
     lg: 1280px,
     xl: 1920px);
@@ -57,16 +58,3 @@ $block-margins: (sm: 1rem,
     lg: 3rem,
     xl: 4rem,
 );
-$block-margins-sm: (sm: .5rem,
-    md: 1rem,
-    lg: 1.5rem,
-    xl: 2rem,
-);
-
-/* Grid */
-$enable-grid-classes: true;
-$grid-columns: 12;
-$column-gaps: (sm: 12px,
-    md: 24px,
-    lg: 36px,
-    xl: 48px);

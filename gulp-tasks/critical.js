@@ -1,17 +1,17 @@
-'use strict';
+'use strict'
 
-import { paths, errorHandler } from "../gulpfile.babel";
-import gulp from 'gulp';
-import debug from 'gulp-debug';
+import { paths, errorHandler } from '../gulpfile.babel'
+import gulp from 'gulp'
+import debug from 'gulp-debug'
 
-const critical = require('critical').stream;
+const critical = require('critical').stream
 
 gulp.task('critical', () => {
-    return gulp.src(paths.src.critical)
+    return gulp
+        .src(paths.src.critical)
         .pipe(
             critical({
                 base: 'dist/',
-                // target: 'assets/css/main.min.css',
                 dimensions: [
                     {
                         width: 320,
@@ -30,7 +30,9 @@ gulp.task('critical', () => {
         )
         .on('error', errorHandler('critical', 'critical'))
         .pipe(gulp.dest(paths.build.critical))
-        .pipe(debug({
-            'title': 'Critical'
-        }));
-});
+        .pipe(
+            debug({
+                title: 'Critical',
+            })
+        )
+})

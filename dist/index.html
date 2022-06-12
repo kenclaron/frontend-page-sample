@@ -1,22 +1,10 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>Index :: Frontend pack</title>
-    <!--
-    link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
-    link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
-    link(rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png")
-    link(rel="manifest" href="assets/site.webmanifest")
-    link(rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#ffffff")
-    link(rel="shortcut icon" href="assets/favicon.ico")
-    meta(name="msapplication-TileColor" content="#ffffff")
-    meta(name="msapplication-config" content="assets/browserconfig.xml")
-    meta(name="theme-color" content="#ffffff")
-    
-    -->
     <meta name="description" content="Description">
     <meta property="og:url" content="https://">
     <meta property="og:type" content="website">
@@ -24,31 +12,32 @@
     <meta property="twitter:title" content="Index">
     <meta property="og:description" content="description">
     <meta property="twitter:description" content="description">
-    <meta property="og:image" content="assets/share.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   </head>
-  <body class="body dev">
+  <body class="body">
     <header class="header">
       <div class="header__inner">header</div>
     </header>
     <div class="content">
       <div class="container">
         <div class="block">
-          <ul class="dev-menu">
-            <li class="dev-menu__item"><a href="#" data-scroll="#rte">Scroll</a></li>
+          <ul class="demo-menu">
+            <li><a href="other-page.html">Other Page</a></li>
+            <li><span class="link js-scrollto" data-target="#scroll">Scroll</span></li>
+            <li><a href="popup.html" data-fancybox data-type="ajax">Fancy Ajax Popup</a></li>
           </ul>
         </div>
-        <div class="block">
-          <pre>.block</pre>
-        </div>
-        <div class="block _mb-none">
+        <div class="block _mb-none demo-block">
           <pre>.block._mb-none</pre>
         </div>
-        <div class="block _white _mb-small">
-          <pre>.block._white._mb-small</pre>
+        <div class="block demo-block">
+          <pre>.block</pre>
         </div>
-        <div class="block"><span class="text-muted">.text-muted</span><span class="text-nowrap">.text-nowrap</span><span class="text-uppercase">.text-uppercase</span><span class="color-primary">.color-primary</span><span class="color-secondary">.color-secondary</span><a href="#">a</a><span class="link">span.link</span><br><span style="font-size: 2rem">Iconfont: <i class="icon-facebook"> </i><i class="icon-twitter"> </i><i class="icon-instagram"> </i><i class="icon-vk"> </i></span></div>
-        <div class="block dev-flex">
+        <div class="block"> <span class="text-muted">.text-muted</span> <span class="text-nowrap">.text-nowrap</span> <span class="text-uppercase">.text-uppercase</span> <span class="color-primary">.color-primary</span> <span class="color-secondary">.color-secondary</span> <a href="#">a</a> <span class="link">.link</span> <br><span class="demo-font">font-family-alt</span></div>
+        <div class="block">
+          <pre>i.icon-{name}</pre><span style="font-size:2rem"><i class="icon-facebook"> </i><i class="icon-twitter"> </i><i class="icon-instagram"> </i><i class="icon-vk"> </i></span>
+        </div>
+        <div class="block demo-flex">
           <button class="btn">.btn </button>
           <button class="btn" disabled>.btn(disabled)</button>
           <button class="btn _primary">.btn._primary</button>
@@ -57,38 +46,40 @@
           <button class="btn _secondary" disabled>.btn._secondary(disabled)</button>
         </div>
         <div class="block">
-          <form class="form">
-            <div class="form__item">
-              <div class="input js-label">
-                <input>
-                <label>.input.js-label input</label>
-              </div>
-            </div>
-            <div class="form__item">
-              <div class="input _error js-label">
-                <input required>
-                <label>.input._error.js-label input(required)</label>
-              </div>
-            </div>
-            <div class="form__item">
-              <div class="input js-label">
-                <input disabled>
-                <label>.input.js-label input(disabled)</label>
-              </div>
-            </div>
-            <div class="form__item">
-              <div class="input js-label">
-                <input class="js-mask__tel" type="tel">
-                <label>.input.js-label input.js-mask__tel(type="tel")</label>
-              </div>
-            </div>
-          </form>
+          <div class="input js-label">
+            <input>
+            <label>.input.js-label input</label>
+          </div>
+          <div class="input _error js-label">
+            <input required>
+            <label>.input._error.js-label input(required)</label>
+          </div>
+          <div class="input js-label">
+            <input disabled>
+            <label>.input.js-label input(disabled)</label>
+          </div>
+          <div class="input js-label">
+            <input class="js-mask" type="tel">
+            <label>.input.js-label input.js-mask(type="tel")</label>
+          </div>
         </div>
         <div class="block">
           <pre>.bk</pre>
           <p class="bk"><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item">span.bk__item</span></p>
         </div>
-        <div class="block" id="rte">
+        <div class="block">
+          <pre>+svgsprite("{name}")</pre>
+              <svg class="svgsprite _wikipedia">
+                <use xlink:href="assets/img/svgsprite/svgsprite.svg#wikipedia"></use>
+              </svg>
+              <svg class="svgsprite _track">
+                <use xlink:href="assets/img/svgsprite/svgsprite.svg#track"></use>
+              </svg>
+        </div>
+        <div class="block">
+          <pre>+pngsprite("{name}")</pre><i class="pngsprite _insta-raz"></i><i class="pngsprite _insta-dva"></i>
+        </div>
+        <div class="block" id="scroll">
           <pre>div.rte</pre>
           <div class="rte">
             <h3>Title H3</h3>
@@ -100,6 +91,7 @@
               <li>Four</li>
             </ul>
             <p>Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.</p>
+            <p> <img src="assets/img/lena.jpg" alt=""><img src="assets/img/transparency.png" alt=""><img src="assets/img/logo.svg" alt=""></p>
             <ol>
               <li>One</li>
               <li>Two</li>
@@ -112,16 +104,8 @@
             <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-4 col-lg-6">
-            <div class="dev-col">.col-sm-12.col-md-4.col-lg-6</div>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-3">
-            <div class="dev-col">.col-sm-12.col-md-4.col-lg-3</div>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-3">
-            <div class="dev-col">.col-sm-12.col-md-4.col-lg-3</div>
-          </div>
+        <div class="block">
+          <pre>img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")</pre><img class="lazyload" data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="">
         </div>
       </div>
     </div>
@@ -131,17 +115,17 @@
     <div class="hidden">
       <!-- include popups here-->
     </div>
-    <link rel="stylesheet" href="assets/css/common.css?v=1.2.4">
+    <link rel="stylesheet" href="assets/css/common.css?v=2.0.0">
     <script>
       /* изменяемые настройки скриптов, указаны значения по умолчанию */
       var appConfig = {
           /*
-          scrollToOffset: 150, // оффсет при скролле до элемента
-          scrollToSpeed: 500, // скорость скролла 
+          scrollToOffset: 100, // оффсет при скролле до элемента
+          popupLoadedEvent: 'app.popup_loaded' // событие загрузки модалки
           */
       }
     </script>
-    <script src="assets/js/vendors~main.bundle.js"></script>
-    <script src="assets/js/main.bundle.js?v=1.2.4"></script>
+    <script src="assets/js/vendors.bundle.js"></script>
+    <script src="assets/js/main.bundle.js?v=2.0.0"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Commons
 @import "variables";
 @import "custom-reset";
@@ -7,27 +9,23 @@
 @import "mixins";
 @import "base";
 @import "generated/iconfont";
-// @import "generated/sprites";
-// @import "generated/svgsprites";
+@import "generated/pngsprite";
+@import "generated/svgsprite";
 @import "fonts";
 
 // External
-// @import "vendor/jquery.fancybox.css";
-// @import "node_modules/swiper/swiper.scss";
-// @import "node_modules/swiper/components/pagination/pagination.scss";
-// @import "node_modules/swiper/components/navigation/navigation.scss";
+@import "node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
 
 // Base components
 @import "components/base/bk";
 @import "components/base/block";
 @import "components/base/btn";
 @import "components/base/content";
-@import "components/base/dev";
-@import "components/base/form";
 @import "components/base/footer";
 @import "components/base/header";
 @import "components/base/input";
 @import "components/base/menu-toggler";
 @import "components/base/rte";
+@import "components/base/demo";
 
 // Project components
