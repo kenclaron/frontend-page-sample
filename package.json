@@ -23,7 +23,7 @@
         "serve": "gulp serve",
         "jslint": "eslint src/js/**",
         "jslint --fix": "eslint --fix --color src/js/**",
-        "critical": "gulp critical",
+        "critical": "gulp critical"
     },
     "browserslist": [
         "last 2 versions",
