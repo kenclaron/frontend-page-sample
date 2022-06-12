@@ -23,23 +23,13 @@
         "serve": "gulp serve",
         "jslint": "eslint src/js/**",
         "jslint --fix": "eslint --fix --color src/js/**",
-        "critical": "gulp critical"
+        "critical": "gulp critical",
     },
     "browserslist": [
         "last 2 versions",
         "> 2%",
         "not ie > 0"
     ],
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "src/js/**": [
-            "eslint --fix --color"
-        ]
-    },
     "devDependencies": {
         "@babel/core": "^7.18.2",
         "@babel/eslint-parser": "^7.18.2",
@@ -71,7 +61,6 @@
         "gulp-svg-sprite": "^1.5.0",
         "gulp-webp": "^4.0.1",
         "gulp.spritesmith": "^6.13.0",
-        "husky": "^8.0.1",
         "imagemin-mozjpeg": "9.0.0",
         "imagemin-webp": "6.0.0",
         "require-dir": "^1.2.0",
