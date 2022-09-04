@@ -1,5 +1,7 @@
 # Frontend page sample (Pug + SCSS + Gulp)
 
+> Link: https://frontend-page-sample.vercel.app/
+
 > Project for Riverstart (<https://riverstart.ru>)
 
 > Case: Create the provided layout using gulp packing, Pug, SCSS and other libraries. Requirements: cross-browsers supporting (latest versions of Chrome, Firefox and Safari), adhere to pixel-perfect layout principles, creating animations and states for buttons, progress bars, headers
@@ -57,7 +59,7 @@
 
 ### **Open Webpage**
 
-* Open: `{soon}`
+* Open: <https://frontend-page-sample.vercel.app/>
 
 ## Plugins
 
