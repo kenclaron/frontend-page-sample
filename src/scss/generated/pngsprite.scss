@@ -1,0 +1,21 @@
+.pngsprite {
+    display:inline-block;
+    background-image:url(img/pngsprite-1441a7909c.png);
+    background-repeat:no-repeat;
+
+    &._insta-dva {
+        background-position:0px 0px;
+        width:100px;
+        height:100px;
+    }
+    &._insta-raz {
+        background-position:-101px 0px;
+        width:100px;
+        height:100px;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image:url(img/pngsprite@2x-1441a7909c.png);
+        background-size:201px 100px;
+    }
+}

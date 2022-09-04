@@ -1,0 +1,24 @@
+.content {
+  display: grid;
+
+  grid-template-areas: "A B";
+  grid-auto-columns: auto 1fr;
+  gap: 32px;
+
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: start;
+  justify-content: center;
+  justify-items: center;
+
+  padding: 3rem 1.6rem 3rem 2rem;
+  
+  margin: 0 auto;
+
+  max-width: 1178px;
+  width: 100%;
+
+  ._visible {
+    display: block;
+  }
+}

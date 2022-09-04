@@ -1,0 +1,10 @@
+.screen {
+  $root: &;
+
+  display: none;
+
+  // 
+  &.card._visible {
+
+  }
+}

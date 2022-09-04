@@ -1,0 +1,106 @@
+html {
+    font-size: $font-size;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    background: $color-bg;
+    color: $color-text;
+
+    font-family: $font-family;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}
+
+.container {
+    @include make-container();
+}
+
+.hidden {
+    display: none !important;
+
+    @each $key in (md, lg, xl) {
+        &-#{$key} {
+            @include up($key) {
+                display: none !important;
+            }
+        }
+    }
+}
+
+.visible-xl {
+    @include down(lg) {
+        display: none !important;
+    }
+}
+
+.visible-lg {
+    @include down(md) {
+        display: none !important;
+    }
+}
+
+.visible-md {
+    @include down(sm) {
+        display: none !important;
+    }
+}
+
+.text {
+    &-nowrap {
+        white-space: nowrap;
+    }
+
+    &-muted {
+        color: rgba($color-text, .5);
+    }
+
+    &-uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.color-primary {
+    color: $color-primary !important;
+}
+
+.color-secondary {
+    color: $color-secondary !important;
+}
+
+a,
+.link {
+    cursor: pointer;
+    color: $link-color;
+    text-decoration: underline solid rgba($color-text, .5);
+    @include transition((color, text-decoration-color));
+
+    @include hover {
+        color: $link-hover-color;
+        text-decoration-color: rgba($link-hover-color, .5);
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+::placeholder {
+    color: rgba($color-text, .5);
+}
+
+:focus::placeholder {
+    opacity: 1;
+}
+
+.necessaty_fields {
+    display: none !important;
+}
+
+.lazyload {
+    visibility: hidden;
+}

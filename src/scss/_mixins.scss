@@ -1,0 +1,22 @@
+/* common */
+
+@mixin transition($p) {
+    transition-property: $p;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+}
+
+@mixin border-inset($width, $color) {
+    box-shadow: inset $width 0 0 $color,
+        inset 0 $width 0 $color,
+        inset (-$width) 0 0 $color,
+        inset 0 (-$width) 0 $color;
+}
+
+@mixin hover() {
+    @media (hover) {
+        &:hover {
+            @content
+        }
+    }
+}

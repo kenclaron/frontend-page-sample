@@ -1,0 +1,13 @@
+/*
+Основной контейнер
+*/
+.content {
+    overflow: hidden;
+    padding-top: map-get($header-height, sm) + 1rem;
+
+    @each $key in (md, lg, xl) {
+        @include up($key) {
+            padding-top: map-get($header-height, $key) + 1rem;
+        }
+    }
+}

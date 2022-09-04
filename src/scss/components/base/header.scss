@@ -1,0 +1,27 @@
+.header {
+    $root: &;
+
+    position: fixed;
+    z-index: $header-z-index;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    height: map-get($header-height, sm);
+
+    @each $key in (md, lg, xl) {
+        @include up($key) {
+            height: map-get($header-height, $key);
+        }
+    }
+
+    &__inner {
+        @extend .container;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+}

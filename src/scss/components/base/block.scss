@@ -1,0 +1,17 @@
+// base blocks
+.block {
+    $root: &;
+
+    margin-bottom: map-get($block-margins, sm);
+
+    @each $key in (md, lg, xl) {
+        @include up($key) {
+            margin-bottom: map-get($block-margins, $key);
+        }
+    }
+
+    &._mb-none {
+        margin-bottom: 0;
+    }
+
+}

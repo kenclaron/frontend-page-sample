@@ -1,0 +1,31 @@
+block config
+
+doctype html
+html(lang="ru")
+    head
+        block head
+            include head
+    body.body(class=bodyClass)
+        include mixins/svgsprite
+        include mixins/pngsprite
+
+        .content
+            block content
+
+        .hidden
+            // include popups here
+
+        block styles
+            link(rel="stylesheet" href="assets/css/common.css?v=" + PACKAGE.version)
+        block scripts-config
+            script.
+                /* изменяемые настройки скриптов, указаны значения по умолчанию */
+                var appConfig = {
+                    /*
+                    scrollToOffset: 100, // оффсет при скролле до элемента
+                    popupLoadedEvent: 'app.popup_loaded' // событие загрузки модалки
+                    */
+                }
+        block scripts
+            script(src="assets/js/vendors.bundle.js")
+            script(src="assets/js/main.bundle.js?v=" + PACKAGE.version)

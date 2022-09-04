@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Frontend Page Sample</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="assets/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Frontend Page Sample by Dmitry Britov with Pug, SCSS, Gulp, Pixel Perfect HTML-Coding">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Frontend Page Sample">
+    <meta property="twitter:title" content="Frontend Page Sample">
+    <meta property="og:description" content="Frontend Page Sample by Dmitry Britov with Pug, SCSS, Gulp, Pixel Perfect HTML-Coding">
+    <meta property="twitter:description" content="Frontend Page Sample by Dmitry Britov with Pug, SCSS, Gulp, Pixel Perfect HTML-Coding">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  </head>
+  <body class="body">
+    <div class="content">
+      <div class="menu">
+        <div class="block">
+          <ul>
+            <li class="text-muted text-uppercase"><span>Personal</span></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#notifications">Notifications</a></li>
+            <li class="text-muted text-uppercase"><span>Tesla S.R.L.</span></li>
+            <li><a href="#business-profile">Business profile</a></li>
+            <li><a href="#e-invoicing">E-invoicing</a></li>
+            <li class="_selected"><a href="#plan-and-limits">Plan and limits</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="page"> 
+        <div class="screen profile">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Profile</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen security">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Security</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen notifications">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Notifications</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen business-profile">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Business profile</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen e-invoicing">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">E-invoicing</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen plan-and-limits _visible">
+          <div class="container card">
+            <div class="block information"> <a class="plan plan-switcher float-right" href="#change-plan">Change plan</a>
+              <h1 class="plan-name">Invoicing Start</h1>
+              <div class="price"> 
+                <h2>6,99 </h2><i class="euro"> &#xf153; </i><span class="text-muted _monthly">/mo</span>
+              </div>
+              <div class="charge-info">
+                <div class="text-muted"><span>We'll charge 6,99 </span><i class="euro"> &#xf153; </i><span>on Jul 24, 2020</span></div><a class="description" href="#change-card">Change card *** 5423 or billing info</a>
+              </div>
+              <div class="annual-switcher">
+                <button class="btn _secondary">Switch to annual plan </button><span class="description"><span>and save 24,00 </span><i class="euro"> &#xf153; </i><span>a year</span></span>
+              </div>
+            </div>
+            <hr><br>
+            <div class="features"> 
+              <h4>Explore new features</h4><img class="emoji" src="assets/img/dizzy.png" alt="">
+              <div class="feature"> 
+                <h3>Invoicing Premium</h3><a class="feature-close-link" href="#close-feature"></a>
+                <ul class="list-features"> 
+                  <li>
+                    <p>Unlimited outgoing e-invoices </p>
+                  </li>
+                  <li> 
+                    <p>Unlimited connected banks </p>
+                  </li>
+                  <li> 
+                    <p>10 users</p>
+                  </li>
+                  <li> 
+                    <p>Expense management </p>
+                  </li>
+                </ul>
+                <div class="purchase-info"> 
+                  <div class="price">
+                    <h3><i class="euro">&#xf153;</i><span>20.99  </span><span class="text-muted _monthly"> /mo</span></h3>
+                    <p class="description"> <span>billed annually or 24.99 </span><i class="euro"> &#xf153;</i><span>billed monthly </span></p>
+                  </div>
+                  <button class="btn plan-switcher _primary">Upgrade</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container card additional-info"> 
+            <div class="tabs"><span class="tab _selected" data-href="#limits">Limits </span><span class="tab" data-href="#invoices">Invoices </span></div>
+            <div class="tile limits _visible">
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Team members </h4><span>3  </span><span class="text-muted"> / 6</span>
+                </div>
+                <progress value="0" max="6" data-value="3"></progress>
+                <div class="description"> <span>Need more members? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Outgoing e-invoices </h4><span class="text-muted word-prompt">Unlimited</span>
+                </div>
+                <progress value="0" max="100" data-value="100"></progress>
+                <div class="description"> <span>Send as many e-invoices as you want </span></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Connected sources (banks) </h4><span>5</span><span class="text-muted"> / 5</span>
+                </div>
+                <progress class="_filled" value="0" max="5" data-value="5"></progress>
+                <div class="description"> <span>Need more banks to connect? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+            </div>
+            <div class="tile invoices">
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Team members </h4><span>6 </span><span class="text-muted"> / 6</span>
+                </div>
+                <progress class="_filled" value="0" max="6" data-value="6"></progress>
+                <div class="description"> <span>Need more members? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Outgoing e-invoices </h4><span class="text-muted word-prompt">Unlimited</span>
+                </div>
+                <progress value="0" max="100" data-value="0"></progress>
+                <div class="description"> <span>Send as many e-invoices as you want </span></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Connected sources (banks) </h4><span>1</span><span class="text-muted"> / 5</span>
+                </div>
+                <progress value="0" max="5" data-value="1"></progress>
+                <div class="description"> <span>Need more banks to connect? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen team">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Team</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden">
+      <!-- include popups here-->
+    </div>
+    <link rel="stylesheet" href="assets/css/common.css?v=2.0.0">
+    <script>
+      /* изменяемые настройки скриптов, указаны значения по умолчанию */
+      var appConfig = {
+          /*
+          scrollToOffset: 100, // оффсет при скролле до элемента
+          popupLoadedEvent: 'app.popup_loaded' // событие загрузки модалки
+          */
+      }
+    </script>
+    <script src="assets/js/vendors.bundle.js"></script>
+    <script src="assets/js/main.bundle.js?v=2.0.0"></script>
+  </body>
+</html>

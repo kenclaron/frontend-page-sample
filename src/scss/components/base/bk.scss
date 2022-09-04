@@ -1,0 +1,22 @@
+/* breadcrumbs */
+.bk {
+    $root: &;
+    font-size: 0;
+
+    &__item {
+        display: inline-block;
+        font-size: $font-size;
+        line-height: $line-height;
+
+        &:not(:last-child) {
+            margin-right: .5em;
+            &:after {
+                content: '/';
+                display: inline-block;
+                margin-left: .5em;
+                color: rgba($color-text, .5);
+            }
+        }
+    }
+
+}

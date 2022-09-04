@@ -1,0 +1,16 @@
+.svgsprite {
+    display:inline-block;
+    width:1em;
+    height:1em;
+    fill:currentColor;
+    vertical-align:middle;
+
+    &._track {
+    	font-size:(math.div(57,10))*1rem;
+    	width:(math.div(86,57))*1em;
+    }
+    &._wikipedia {
+    	font-size:(math.div(94,10))*1rem;
+    	width:(math.div(103,94))*1em;
+    }
+}

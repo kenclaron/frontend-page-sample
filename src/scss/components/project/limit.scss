@@ -1,0 +1,106 @@
+.limit {
+  display: grid;
+
+  color: #222B55;
+  
+  font-family: $font-family;
+
+  .title {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    h4 {
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+
+      letter-spacing: -0px;
+    }
+
+    span {
+      font-size: 14px;
+
+      &.text-muted {
+        padding-left: 4px;
+
+        letter-spacing: 1.8px;
+      }
+
+      &.word-prompt {
+        padding-left: 4px;
+
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  progress {
+    width: 100%;
+    margin: 8px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    
+    height: 8px;
+    border-radius: 4px;
+
+    &::-webkit-progress-bar {
+      border-radius: 4px;
+      background-color: #EBECF0;
+    }
+    &::-webkit-progress-value {
+      border-radius: 4px;
+      background-color: #415DE8;
+      transition: width 1s;
+    }
+    &::-moz-progress-bar {
+      border-radius: 4px;
+      background-color: #415DE8;
+    }
+    &::-moz-progress-value {
+      border-radius: 4px;
+      background-color: #415DE8;
+      transition: width 1s;
+    }
+
+    &._filled {
+      &::-webkit-progress-bar {
+        background-color: #EBECF0;
+      }
+      &::-webkit-progress-value {
+        background-color: $color-primary;
+        transition: width 1s;
+      }
+      &::-moz-progress-bar {
+        background-color: $color-primary;
+      }
+      &::-moz-progress-value {
+        background-color: $color-primary;
+        transition: width 1s;
+      }
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #7B829A;
+
+    letter-spacing: 0.075px;
+
+    a {
+      color: #7B829A;
+
+      text-underline-offset: 4px;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

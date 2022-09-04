@@ -1,0 +1,152 @@
+.feature {
+  $root: &;
+
+  display: grid;
+  grid-template-areas: 
+    "A D"
+    "B C";
+  grid-template-columns: auto 170px;
+  row-gap: 0.31rem;
+
+  align-items: start;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-content: space-between;
+
+  background-color: #F5F8FF;
+
+  border-radius: 12px;
+  padding: 1.55rem 40px 12px;
+
+  margin-top: 1.3rem;
+
+  &._closed {
+    display: none;
+  }
+
+  h3 {
+    grid-area: A;
+    color: #415DE8;
+  }
+
+  .list-features {
+    grid-area: B;
+
+    font-size: 14px;
+
+    li {
+      margin: 12px 1.8rem;
+      color: #222B55;
+  
+      &::before {
+        content: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 10.0001C5.24 10.0001 4.99 9.90007 4.79 9.71007L0.789998 5.71007C0.399998 5.32007 0.399998 4.69007 0.789998 4.30007C1.18 3.91007 1.80999 3.91007 2.19999 4.30007L5.5 7.59007L12.79 0.300068C13.18 -0.0899316 13.81 -0.0899316 14.2 0.300068C14.59 0.690068 14.59 1.32007 14.2 1.71007L6.19999 9.71007C6.00999 9.90007 5.76 10.0001 5.5 10.0001Z' fill='%23758EF0'/%3E%3C/svg%3E%0A");
+        position: absolute;
+        width: 15px;
+        height: 10px;
+        left: -24px;
+        top: 0.5px;
+      }
+    }
+  }
+
+  .purchase-info {
+    grid-area: C;
+
+    display: flex;
+
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    height: 100%;
+    padding-bottom: 10px;
+
+    text-align: right;
+
+    .price {
+      position: relative;
+      top: -0.65rem;
+
+      margin: 0;
+
+      color: #222B55;
+
+      ._monthly {
+        color: #222B55;
+        letter-spacing: 0.3px;
+
+        margin-left: 2px;
+      }
+
+      .text-muted {
+        font-size: 15px;
+      }
+
+      h3 {
+        color: #222B55;
+      }
+
+      .euro {
+        font-size: 22px;
+        margin-right: 4px;
+      }
+  
+      .description {
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.05px;
+        line-height: 15px;
+
+        margin-top: 6px;
+  
+        color: #7B829A;
+
+        font-family: $font-family;
+
+        span {
+          display: inline-block;
+        }
+
+        .euro {
+          display: inline-block;
+
+          font-size: 10px;
+
+          margin-left: 2px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    & button {
+      padding: 0 16px;
+    }
+  }
+
+  .feature-close-link {
+    grid-area: D;
+
+    display: inline-block;
+
+    width: 4px;
+    height: 4px;
+
+    box-sizing: content-box;
+
+    padding: 6px;
+
+    position: absolute;
+    top: -3px;
+    right: -3px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.94118 4L7.80476 1.13642C8.06508 0.876095 8.06508 0.455569 7.80476 0.195244C7.54443 -0.0650814 7.1239 -0.0650814 6.86358 0.195244L4 3.05882L1.13642 0.195244C0.876098 -0.0650814 0.45557 -0.0650814 0.195244 0.195244C-0.0650814 0.455569 -0.0650814 0.876095 0.195244 1.13642L3.05882 4L0.195244 6.86358C-0.0650814 7.1239 -0.0650814 7.54443 0.195244 7.80476C0.45557 8.06508 0.876098 8.06508 1.13642 7.80476L4 4.94118L6.86358 7.80476C7.1239 8.06508 7.54443 8.06508 7.80476 7.80476C8.06508 7.54443 8.06508 7.1239 7.80476 6.86358L4.94118 4Z' fill='%23415DE8' /%3E%3C/svg%3E%0A");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.94118 4L7.80476 1.13642C8.06508 0.876095 8.06508 0.455569 7.80476 0.195244C7.54443 -0.0650814 7.1239 -0.0650814 6.86358 0.195244L4 3.05882L1.13642 0.195244C0.876098 -0.0650814 0.45557 -0.0650814 0.195244 0.195244C-0.0650814 0.455569 -0.0650814 0.876095 0.195244 1.13642L3.05882 4L0.195244 6.86358C-0.0650814 7.1239 -0.0650814 7.54443 0.195244 7.80476C0.45557 8.06508 0.876098 8.06508 1.13642 7.80476L4 4.94118L6.86358 7.80476C7.1239 8.06508 7.54443 8.06508 7.80476 7.80476C8.06508 7.54443 8.06508 7.1239 7.80476 6.86358L4.94118 4Z' fill='%23FF5762' /%3E%3C/svg%3E%0A");
+    }
+  }
+}

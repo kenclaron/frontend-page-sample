@@ -1,0 +1,52 @@
+@media (max-width: 968px) {
+  .content {
+    display: flex;
+
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .card .charge-info,
+  .card .annual-switcher {
+    flex-direction: column;
+  }
+
+  .feature {
+    grid-template-areas:
+        "A D"
+        "B ."
+        "C C";
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    padding: 1.5rem 1rem 0.5rem;
+
+    .purchase-info {
+      text-align: left;
+      align-items: flex-start;
+
+      .price {
+        .euro {
+          margin-left: 0;
+        }
+
+        .description .euro {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+  .tile {
+    grid-template-columns: 1fr;
+  }
+}

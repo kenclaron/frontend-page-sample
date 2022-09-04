@@ -1,0 +1,111 @@
+.input {
+    $root: &;
+
+    // font-size: 0;
+    // line-height: 0;
+
+    input,
+    textarea {
+        width: 100%;
+        color: $color-text;
+        line-height: 1.2;
+        height: 3rem;
+        padding: 0 1rem;
+        @include transition(box-shadow);
+        @include border-inset(1px, rgba($color-text, .5));
+
+        &:hover {
+            @include border-inset(1px, rgba($color-text, .7));
+        }
+
+        &:focus {
+            @include border-inset(1px, $color-text);
+        }
+
+        &:disabled {
+            opacity: .7;
+            pointer-events: none;
+        }
+
+        &:required {
+            ~label:after {
+                content: '*';
+            }
+        }
+
+    }
+
+    &._error {
+
+        input,
+        textarea {
+            @include border-inset(1px, rgba($color-error, .5));
+
+            &:hover {
+                @include border-inset(1px, rgba($color-error, .7));
+            }
+
+            &:focus {
+                @include border-inset(1px, $color-error);
+            }
+        }
+    }
+
+    // textarea {
+    //     height: 182px;
+
+    //     /*line-height: 1.2;*/
+    //     @include up(md) {
+    //         height: 220px;
+    //     }
+    // }
+
+    label {
+        position: absolute;
+        font-size: 1rem;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: rgba($color-text, .6);
+
+        @include transition(all);
+
+        &._label-empty {
+            font-size: 1rem !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+
+            // @include up(md) {
+            //     top: 23px !important;
+            // }
+            // @include up(lg) {
+            //     font-size: 16px !important;
+            // }
+            // @include up(xl) {
+            //     font-size: 17px !important;
+            // }
+        }
+
+    }
+
+    input:focus+label,
+    input:valid+label,
+    input:disabled+label,
+    input[type=email]+label,
+    textarea:focus+label,
+    textarea:valid+label,
+    select:focus~label,
+    select:valid+label {
+        font-size: 60%;
+        top: 4px;
+        transform: none;
+    }
+
+    input:focus+._label-empty,
+    textarea:focus+._label-empty {
+        font-size: 60% !important;
+        top: 4px !important;
+    }
+
+}

@@ -1,0 +1,35 @@
+// use only for demonstration
+
+.demo {
+    &-block {
+        padding: 1rem;
+        border: 1px dotted rgba($color-text, .5);
+    }
+
+    &-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-menu {
+        @include up(md) {
+            column-count: 2;
+        }
+
+        @include up(lg) {
+            column-count: 4;
+        }
+
+        li {
+            display: block;
+            margin-bottom: 1em;
+            page-break-inside: avoid;
+        }
+    }
+
+    &-font {
+        font-family: $font-family-alt;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
