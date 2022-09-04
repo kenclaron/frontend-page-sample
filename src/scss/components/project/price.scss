@@ -1,0 +1,23 @@
+.price {
+  $root: &;
+
+  font-family: $font-family-headers;
+  font-size: 28px;
+  font-weight: bold;
+
+  margin: 0.5rem 0;
+
+  h2 {
+    display: inline-block;
+  }
+  
+  .euro {
+    margin-left: 4px;
+    margin-right: 8px;
+    font-size: 24px;
+  }
+
+  ._monthly {
+    letter-spacing: 1px;
+  }
+}

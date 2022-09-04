@@ -1,5 +1,3 @@
-'use strict'
-
 import { paths, errorHandler } from '../gulpfile.babel'
 import gulp from 'gulp'
 import debug from 'gulp-debug'

@@ -1,8 +1,11 @@
+- var pagetitle = "Frontend Page Sample"
+- var description = "Frontend Page Sample by Dmitry Britov with Pug, SCSS, Gulp, Pixel Perfect HTML-Coding"
+
 meta(charset="utf-8")
 meta(name="viewport" content="width=device-width, initial-scale=1.0")
 meta(name="format-detection" content="telephone=no")
 
-title #{pagetitle} :: Frontend pack
+title #{pagetitle}
 
 link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
 link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
@@ -14,14 +17,12 @@ meta(name="msapplication-TileColor" content="#ffffff")
 meta(name="msapplication-config" content="assets/browserconfig.xml")
 meta(name="theme-color" content="#ffffff")
 
-meta(name="description" content="Description")
-meta(property="og:url" content="https://")
+meta(name="description" content=description)
 meta(property="og:type" content="website")
 meta(property="og:title" content=pagetitle)
 meta(property="twitter:title" content=pagetitle)
-meta(property="og:description" content="description")
-meta(property="twitter:description" content="description")
-//-meta(property="og:image" content="assets/share.png")
+meta(property="og:description" content=description)
+meta(property="twitter:description" content=description)
 
 link(rel="preconnect" href="https://fonts.googleapis.com")
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Index :: Frontend pack</title>
+    <title>Frontend Page Sample</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -14,113 +14,169 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="assets/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Description">
-    <meta property="og:url" content="https://">
+    <meta name="description" content="Frontend Page Sample by Dmitry Britov with Pug, SCSS, Gulp, Pixel Perfect HTML-Coding">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Index">
-    <meta property="twitter:title" content="Index">
-    <meta property="og:description" content="description">
-    <meta property="twitter:description" content="description">
+    <meta property="og:title" content="Frontend Page Sample">
+    <meta property="twitter:title" content="Frontend Page Sample">
+    <meta property="og:description" content="Frontend Page Sample by Dmitry Britov with Pug, SCSS, Gulp, Pixel Perfect HTML-Coding">
+    <meta property="twitter:description" content="Frontend Page Sample by Dmitry Britov with Pug, SCSS, Gulp, Pixel Perfect HTML-Coding">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   </head>
   <body class="body">
-    <header class="header">
-      <div class="header__inner">header</div>
-    </header>
     <div class="content">
-      <div class="container">
+      <div class="menu">
         <div class="block">
-          <ul class="demo-menu">
-            <li><a href="other-page.html">Other Page</a></li>
-            <li><span class="link js-scrollto" data-target="#scroll">Scroll</span></li>
-            <li><a href="popup.html" data-fancybox data-type="ajax">Fancy Ajax Popup</a></li>
+          <ul>
+            <li class="text-muted text-uppercase"><span>Personal</span></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#notifications">Notifications</a></li>
+            <li class="text-muted text-uppercase"><span>Tesla S.R.L.</span></li>
+            <li><a href="#business-profile">Business profile</a></li>
+            <li><a href="#e-invoicing">E-invoicing</a></li>
+            <li class="_selected"><a href="#plan-and-limits">Plan and limits</a></li>
+            <li><a href="#team">Team</a></li>
           </ul>
         </div>
-        <div class="block _mb-none demo-block">
-          <pre>.block._mb-none</pre>
-        </div>
-        <div class="block demo-block">
-          <pre>.block</pre>
-        </div>
-        <div class="block"> <span class="text-muted">.text-muted</span> <span class="text-nowrap">.text-nowrap</span> <span class="text-uppercase">.text-uppercase</span> <span class="color-primary">.color-primary</span> <span class="color-secondary">.color-secondary</span> <a href="#">a</a> <span class="link">.link</span> <br><span class="demo-font">font-family-alt</span></div>
-        <div class="block">
-          <pre>i.icon-{name}</pre><span style="font-size:2rem"><i class="icon-facebook"> </i><i class="icon-twitter"> </i><i class="icon-instagram"> </i><i class="icon-vk"> </i></span>
-        </div>
-        <div class="block demo-flex">
-          <button class="btn">.btn </button>
-          <button class="btn" disabled>.btn(disabled)</button>
-          <button class="btn _primary">.btn._primary</button>
-          <button class="btn _primary" disabled>.btn._primary(disabled)</button>
-          <button class="btn _secondary">.btn._secondary</button>
-          <button class="btn _secondary" disabled>.btn._secondary(disabled)</button>
-        </div>
-        <div class="block">
-          <div class="input js-label">
-            <input>
-            <label>.input.js-label input</label>
-          </div>
-          <div class="input _error js-label">
-            <input required>
-            <label>.input._error.js-label input(required)</label>
-          </div>
-          <div class="input js-label">
-            <input disabled>
-            <label>.input.js-label input(disabled)</label>
-          </div>
-          <div class="input js-label">
-            <input class="js-mask" type="tel">
-            <label>.input.js-label input.js-mask(type="tel")</label>
+      </div>
+      <div class="page"> 
+        <div class="screen profile">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Profile</h1>
+            </div>
           </div>
         </div>
-        <div class="block">
-          <pre>.bk</pre>
-          <p class="bk"><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item">span.bk__item</span></p>
-        </div>
-        <div class="block">
-          <pre>+svgsprite("{name}")</pre>
-              <svg class="svgsprite _wikipedia">
-                <use xlink:href="assets/img/svgsprite/svgsprite.svg#wikipedia"></use>
-              </svg>
-              <svg class="svgsprite _track">
-                <use xlink:href="assets/img/svgsprite/svgsprite.svg#track"></use>
-              </svg>
-        </div>
-        <div class="block">
-          <pre>+pngsprite("{name}")</pre><i class="pngsprite _insta-raz"></i><i class="pngsprite _insta-dva"></i>
-        </div>
-        <div class="block" id="scroll">
-          <pre>div.rte</pre>
-          <div class="rte">
-            <h3>Title H3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas iaculis nisl, in fermentum urna scelerisque nec. Mauris enim erat, bibendum sed condimentum at, ultrices non arcu. Morbi eu sem porttitor, vulputate justo ut, fringilla turpis. Donec in elementum nunc. Cras maximus faucibus dictum. Duis sodales lacus ut eros sollicitudin tristique. Duis vitae tincidunt sem, eget ullamcorper turpis. Maecenas tristique eget leo sed sodales.</p>
-            <ul>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ul>
-            <p>Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.</p>
-            <p> <img src="assets/img/lena.jpg" alt=""><img src="assets/img/transparency.png" alt=""><img src="assets/img/logo.svg" alt=""></p>
-            <ol>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ol>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
+        <div class="screen security">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Security</h1>
+            </div>
           </div>
         </div>
-        <div class="block">
-          <pre>img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")</pre><img class="lazyload" data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="">
+        <div class="screen notifications">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Notifications</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen business-profile">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Business profile</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen e-invoicing">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">E-invoicing</h1>
+            </div>
+          </div>
+        </div>
+        <div class="screen plan-and-limits _visible">
+          <div class="container card">
+            <div class="block information"> <a class="plan plan-switcher float-right" href="#change-plan">Change plan</a>
+              <h1 class="plan-name">Invoicing Start</h1>
+              <div class="price"> 
+                <h2>6,99 </h2><i class="euro"> &#xf153; </i><span class="text-muted _monthly">/mo</span>
+              </div>
+              <div class="charge-info">
+                <div class="text-muted"><span>We'll charge 6,99 </span><i class="euro"> &#xf153; </i><span>on Jul 24, 2020</span></div><a class="description" href="#change-card">Change card *** 5423 or billing info</a>
+              </div>
+              <div class="annual-switcher">
+                <button class="btn _secondary">Switch to annual plan </button><span class="description"><span>and save 24,00 </span><i class="euro"> &#xf153; </i><span>a year</span></span>
+              </div>
+            </div>
+            <hr><br>
+            <div class="features"> 
+              <h4>Explore new features</h4><img class="emoji" src="assets/img/dizzy.png" alt="">
+              <div class="feature"> 
+                <h3>Invoicing Premium</h3><a class="feature-close-link" href="#close-feature"></a>
+                <ul class="list-features"> 
+                  <li>
+                    <p>Unlimited outgoing e-invoices </p>
+                  </li>
+                  <li> 
+                    <p>Unlimited connected banks </p>
+                  </li>
+                  <li> 
+                    <p>10 users</p>
+                  </li>
+                  <li> 
+                    <p>Expense management </p>
+                  </li>
+                </ul>
+                <div class="purchase-info"> 
+                  <div class="price">
+                    <h3><i class="euro">&#xf153;</i><span>20.99  </span><span class="text-muted _monthly"> /mo</span></h3>
+                    <p class="description"> <span>billed annually or 24.99 </span><i class="euro"> &#xf153;</i><span>billed monthly </span></p>
+                  </div>
+                  <button class="btn plan-switcher _primary">Upgrade</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container card additional-info"> 
+            <div class="tabs"><span class="tab _selected" data-href="#limits">Limits </span><span class="tab" data-href="#invoices">Invoices </span></div>
+            <div class="tile limits _visible">
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Team members </h4><span>3  </span><span class="text-muted"> / 6</span>
+                </div>
+                <progress value="0" max="6" data-value="3"></progress>
+                <div class="description"> <span>Need more members? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Outgoing e-invoices </h4><span class="text-muted word-prompt">Unlimited</span>
+                </div>
+                <progress value="0" max="100" data-value="100"></progress>
+                <div class="description"> <span>Send as many e-invoices as you want </span></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Connected sources (banks) </h4><span>5</span><span class="text-muted"> / 5</span>
+                </div>
+                <progress class="_filled" value="0" max="5" data-value="5"></progress>
+                <div class="description"> <span>Need more banks to connect? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+            </div>
+            <div class="tile invoices">
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Team members </h4><span>6 </span><span class="text-muted"> / 6</span>
+                </div>
+                <progress class="_filled" value="0" max="6" data-value="6"></progress>
+                <div class="description"> <span>Need more members? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Outgoing e-invoices </h4><span class="text-muted word-prompt">Unlimited</span>
+                </div>
+                <progress value="0" max="100" data-value="0"></progress>
+                <div class="description"> <span>Send as many e-invoices as you want </span></div>
+              </div>
+              <div class="limit"> 
+                <div class="title">
+                  <h4>Connected sources (banks) </h4><span>1</span><span class="text-muted"> / 5</span>
+                </div>
+                <progress value="0" max="5" data-value="1"></progress>
+                <div class="description"> <span>Need more banks to connect? </span><a class="plan-switcher" href="#change-plan">Upgrade your plan</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screen team">
+          <div class="container card">
+            <div class="block information"> 
+              <h1 class="plan-name">Team</h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="container">footer</div>
-    </footer>
     <div class="hidden">
       <!-- include popups here-->
     </div>

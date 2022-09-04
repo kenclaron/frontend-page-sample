@@ -1,108 +1,154 @@
 extends _includes/layout
 
-block config
-    - var pagetitle = 'Index'
-    //- использовать в крайнем случае
-    //- var bodyClass = ''
-
 block content
-    .container
+    .menu
         .block
-            ul.demo-menu
+            ul
+                li.text-muted.text-uppercase
+                    span Personal
                 li
-                    a(href="other-page.html") Other Page
+                    a(href="#profile") Profile
                 li
-                    span.link.js-scrollto(data-target="#scroll") Scroll
+                    a(href="#security") Security
                 li
-                    a(href="popup.html" data-fancybox data-type="ajax") Fancy Ajax Popup
-        .block._mb-none.demo-block
-            pre .block._mb-none
-        .block.demo-block
-            pre .block
-        .block 
-            span.text-muted .text-muted
-            | 
-            span.text-nowrap .text-nowrap
-            | 
-            span.text-uppercase .text-uppercase
-            | 
-            span.color-primary .color-primary
-            | 
-            span.color-secondary .color-secondary
-            | 
-            a(href="#") a
-            | 
-            span.link .link
-            | 
-            br
-            span.demo-font font-family-alt
-        .block
-            pre i.icon-{name}
-            span(style="font-size:2rem")
-                i.icon-facebook 
-                i.icon-twitter 
-                i.icon-instagram 
-                i.icon-vk 
-        .block.demo-flex
-            button.btn .btn 
-            button.btn(disabled) .btn(disabled)
-            button.btn._primary .btn._primary
-            button.btn._primary(disabled) .btn._primary(disabled)
-            button.btn._secondary .btn._secondary
-            button.btn._secondary(disabled) .btn._secondary(disabled)
-        .block
-            .input.js-label
-                input
-                label .input.js-label input
-            .input._error.js-label
-                input(required)
-                label .input._error.js-label input(required)
-            .input.js-label
-                input(disabled)
-                label .input.js-label input(disabled)
-            .input.js-label
-                input(type="tel").js-mask
-                label .input.js-label input.js-mask(type="tel")
-        .block
-            pre .bk
-            p.bk
-                span.bk__item
-                    a(href="#") span.bk__item a(href="#")
-                span.bk__item
-                    a(href="#") span.bk__item a(href="#")
-                span.bk__item span.bk__item
-        .block
-            pre +svgsprite("{name}")
-            +svgsprite("wikipedia")
-            +svgsprite("track")
-        .block
-            pre +pngsprite("{name}")
-            +pngsprite("insta-raz")
-            +pngsprite("insta-dva")
-        #scroll.block
-            pre div.rte
-            .rte
-                h3 Title H3
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas iaculis nisl, in fermentum urna scelerisque nec. Mauris enim erat, bibendum sed condimentum at, ultrices non arcu. Morbi eu sem porttitor, vulputate justo ut, fringilla turpis. Donec in elementum nunc. Cras maximus faucibus dictum. Duis sodales lacus ut eros sollicitudin tristique. Duis vitae tincidunt sem, eget ullamcorper turpis. Maecenas tristique eget leo sed sodales.
-                ul
-                    li One
-                    li Two
-                    li Three
-                    li Four
-                p Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.
-                p 
-                    img(src="assets/img/lena.jpg" alt="")
-                    img(src="assets/img/transparency.png" alt="")
-                    img(src="assets/img/logo.svg" alt="")
-                ol
-                    li One
-                    li Two
-                    li Three
-                    li Four
-                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
-                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
-                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
-                p Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.
-        .block
-            pre img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")
-            img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")
+                    a(href="#notifications") Notifications
+                li.text-muted.text-uppercase
+                    span Tesla S.R.L.
+                li
+                    a(href="#business-profile") Business profile
+                li
+                    a(href="#e-invoicing") E-invoicing
+                li._selected
+                    a(href="#plan-and-limits") Plan and limits
+                li
+                    a(href="#team") Team
+    .page 
+        .screen.profile
+            .container.card
+                .block.information 
+                    h1.plan-name Profile
+        .screen.security
+            .container.card
+                .block.information 
+                    h1.plan-name Security
+        .screen.notifications
+            .container.card
+                .block.information 
+                    h1.plan-name Notifications
+        .screen.business-profile
+            .container.card
+                .block.information 
+                    h1.plan-name Business profile
+        .screen.e-invoicing
+            .container.card
+                .block.information 
+                    h1.plan-name E-invoicing
+        .screen.plan-and-limits._visible
+            .container.card
+                .block.information 
+                    a.plan.plan-switcher.float-right(href="#change-plan") Change plan
+                    h1.plan-name Invoicing Start
+                    .price 
+                        h2 6,99 
+                        i.euro  &#xf153; 
+                        span.text-muted._monthly /mo
+                    .charge-info
+                        .text-muted
+                            span We'll charge 6,99 
+                            i.euro  &#xf153; 
+                            span on Jul 24, 2020
+                        a.description(href="#change-card") Change card *** 5423 or billing info
+                    .annual-switcher
+                        button.btn._secondary Switch to annual plan 
+                        span.description
+                            span and save 24,00 
+                            i.euro  &#xf153; 
+                            span a year
+                hr
+                br
+                .features 
+                    h4 Explore new features
+                    img.emoji(src="assets/img/dizzy.png" alt="")
+                    .feature 
+                        h3 Invoicing Premium
+                        a(href="#close-feature").feature-close-link
+                        ul.list-features 
+                            li
+                                p Unlimited outgoing e-invoices 
+                            li 
+                                p Unlimited connected banks 
+                            li 
+                                p 10 users
+                            li 
+                                p Expense management 
+                        .purchase-info 
+                            .price
+                                h3
+                                    i.euro &#xf153;
+                                    span 20.99  
+                                    span.text-muted._monthly  /mo
+                                p.description 
+                                    span billed annually or 24.99 
+                                    i.euro  &#xf153;
+                                    span billed monthly 
+                            button.btn.plan-switcher._primary Upgrade
+            .container.card.additional-info 
+                .tabs
+                    span(data-href="#limits").tab._selected Limits 
+                    span(data-href="#invoices").tab Invoices 
+                .tile.limits._visible
+                    .limit 
+                        .title
+                            h4 Team members 
+                            span 3  
+                            span.text-muted  / 6
+                        progress(value="0" max="6" data-value="3")
+                        .description 
+                            span Need more members? 
+                            a(href="#change-plan").plan-switcher Upgrade your plan
+                    .limit 
+                        .title
+                            h4 Outgoing e-invoices 
+                            span.text-muted.word-prompt Unlimited
+                        progress(value="0" max="100" data-value="100")
+                        .description 
+                            span Send as many e-invoices as you want 
+                    .limit 
+                        .title
+                            h4 Connected sources (banks) 
+                            span 5
+                            span.text-muted  / 5
+                        progress(value="0" max="5" data-value="5")._filled
+                        .description 
+                            span Need more banks to connect? 
+                            a(href="#change-plan").plan-switcher Upgrade your plan
+                .tile.invoices
+                    .limit 
+                        .title
+                            h4 Team members 
+                            span 6 
+                            span.text-muted  / 6
+                        progress(value="0" max="6" data-value="6")._filled
+                        .description 
+                            span Need more members? 
+                            a(href="#change-plan").plan-switcher Upgrade your plan
+                    .limit 
+                        .title
+                            h4 Outgoing e-invoices 
+                            span.text-muted.word-prompt Unlimited
+                        progress(value="0" max="100" data-value="0")
+                        .description 
+                            span Send as many e-invoices as you want 
+                    .limit 
+                        .title
+                            h4 Connected sources (banks) 
+                            span 1
+                            span.text-muted  / 5
+                        progress(value="0" max="5" data-value="1")
+                        .description 
+                            span Need more banks to connect? 
+                            a(href="#change-plan").plan-switcher Upgrade your plan
+        .screen.team
+            .container.card
+                .block.information 
+                    h1.plan-name Team

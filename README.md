@@ -1,98 +1,136 @@
-### Быстрый старт
-`yarn dev`
-`yarn build`
-`yarn jslint`
+# Frontend page sample (Pug + SCSS + Gulp)
 
-# Frontend starter pack (Pug + SCSS)
+> Project for Riverstart (<https://riverstart.ru>)
 
-## Особенности
-* сборка для автоматизации задач в повседневной front-end разработке;
-* автоматическая перезагрузка страницы в браузере с использованием `browser-sync`;
-* автоматическая генерация webp-изображений;
-* использование транспайлера [Babel](https://babeljs.io/) для поддержки современного JavaScript (ES6) в браузерах.
+> Case: Create the provided layout using gulp packing, Pug, SCSS and other libraries. Requirements: cross-browsers supporting (latest versions of Chrome, Firefox and Safari), adhere to pixel-perfect layout principles, creating animations and states for buttons, progress bars, headers
 
-## Установка
-Установите [Yarn](https://yarnpkg.com/en/docs/install).
+> Stack: `Pug`, `SCSS`, `JavaScript`, `Node.js`, `yarn`, `iconfont`, `webpack`, `babel`. Requirements: `Pixel Perfect HTML-Coding`.
 
-> Yarn - это современная альтернатива npm. Yarn работает с тем же файлом `package.json` и так же скачивает необходимые модули в папку `node_modules`, но делает это намного быстрее.
+## Features
 
-* скачайте сборку: `git clone http://git.riverstart.ru/kirusanov/frontend-pack.git`;
-* установите `gulp` глобально: `yarn global add gulp-cli`;
-* перейдите в скачанную папку со сборкой: `cd frontend-pack`;
-* введите команду, которая скачает необходимые компоненты для корректной работы нашей сборки, указанные в файле `package.json`: `yarn`;
-* введите команду: `yarn dev` (режим разработки);
-* чтобы «собрать» проект, введите команду `yarn build`.
+* Assembly for automating tasks in everyday front-end development;
+* Automatic page reload in browser using `browser-sync`;
+* Using [Babel](https://babeljs.io/) to support modern JavaScript (ES6) in browsers.
 
-Если вы всё сделали правильно, у вас должен открыться браузер с локальным сервером и работающим `browser-sync`.
+## Usage
 
-> Вы можете отключить ненужные таски (например, `pngsprite`), закомментировав соответствующие строки в файле `gulpfile.babel.js`.
+### **Using via npm**
 
-## Предустановленные пакеты
-Удалите ненужные
-* [fancybox](https://fancyapps.com/docs/ui/fancybox)
-* [inputmask](https://github.com/RobinHerbots/Inputmask)
-* [lazysizes](https://github.com/aFarkas/lazysizes)
+* Install `Node.js`: <https://nodejs.org/en/download/>;
+* Install `yarn`: <https://classic.yarnpkg.com/en/docs/install>;
+* Clone this repository: `git clone https://github.com/kenclaron/frontend-page-sample.git`;
+* Go to folder of repository: `cd ./frontend-page-sample`;
+* Install `gulp` globally: `yarn global add gulp-cli`;
+* Install needed libraries: `yarn` (if you have errors, use alternative npm-command `npm install`);
+* Type: `yarn dev` (launching in dev-mode in browser with `browser-sync`)
+* Type: `yarn jslint` (checking lint errors)
+* Type: `yarn build` (build project for production)
+  * Results save in folder `./dist`
 
-### Сборка проекта в режиме разработки
-`yarn dev`
-
-### Окончательная сборка
-`yarn build`
-
-**Тестировалось на node 16, 14 и 12 под win-64**
-
-[Демо собранного проекта](https://f104.riverstart.ru/frontend-pack/dist/) на чистой сборке.
-
-### Структура каталогов
-```
-frontend-pack
-├── dist Собранный проект
-│   └── assets Исходники из src/static
-│       ├── js Скомпилированные js
-│       └── css Скомпилированные css
-└── src Исходные файлы
-    ├── iconfont Исходники иконочного шрифта (svg), 
-        смотрите рекомендации к исходникам у пакета gulp-iconfont
-    └── js js-файлы
-        ├── components Самодостаточные компоненты
-        └── libs Сторонние библиотеки, которые не получается подключить динамически
-    ├── locales Языковые файлы
-    ├── pngsprite Исходники png-спрайта (используйте @2 в названии для двойной плотности)
-    └── scss
-        ├── components Самодостаточные компоненты
-        ├── fonts Шрифты
-        ├── generated Сгенерированный спрайты и стили шрифтов
-        ├── img Изображения, используемые в стилях
-        ├── templates Шаблоны спрайтов и шрифтов
-        └── vendor Сторонние библиотеки
-    └── static Статические файлы
-        ├── ajax То, что будем загружать через аякс
-        └── img Изображения
-    ├── svgsprite Исходники svg-спрайта
-    └── views pug-шаблоны
-        └── _includes Подключаемые...
-            ├── blocks ...блоки
-            └── mixins ...миксины
+```text
+  git clone https://github.com/kenclaron/frontend-page-sample.git
+  cd ./vue-url-shortener
+  yarn global add gulp-cli
+  yarn
+  yarn dev
+  yarn jslint
+  yarn build
 ```
 
-### Плагины
-* [gulp-if](https://www.npmjs.com/package/gulp-if) - запуск заданий только тогда, когда это нужно;
-* [browser-sync](https://browsersync.io/docs/gulp) - живая перезагрузка веб-страницы при внесении изменений в файлы вашего проекта. Одна из опций — tunnel, которая выдаёт вам ссылку, чтобы любой желающий смог посмотреть вашу работу (в обход хостинга);
-* [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) — автоматически расставляет вендорные префиксы в CSS в соответствии с сервисом [Can I Use](https://caniuse.com/);
-* [gulp-babel](https://www.npmjs.com/package/gulp-babel) - использование ES6 с [Babel](https://babeljs.io/);
-* [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) — минификация JS-файлов;
-* [gulp-pug](https://www.npmjs.com/package/gulp-pug) — компиляция Pug в HTML;
-* [gulp-concat](https://www.npmjs.com/package/gulp-concat) - объединение файлов;
-* [gulp-sass](https://www.npmjs.com/package/gulp-sass) — компиляция SCSS в CSS;
-* [gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css) — минификация CSS-файлов;
-* [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) - карта стилей;
-* [gulp-rename](https://www.npmjs.com/package/gulp-rename) — переименование файлов, добавление суффиксов и префиксов (например, добавление суффикса `.min` к минифицированным файлам);
-* [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) — сжатие изображений;
-* [gulp-svg-sprites](https://www.npmjs.com/package/gulp-svg-sprites) — создание SVG-спрайтов;
-* [gulp-replace](https://www.npmjs.com/package/gulp-replace) - замена строк;
-* [gulp-plumber](https://www.npmjs.com/package/gulp-plumber) — оповещения в командной строке (например, ошибки в SCSS/Sass);
-* [gulp-debug](https://www.npmjs.com/package/gulp-debug) — отладка в терминале;
-* [gulp-watch](https://www.npmjs.com/package/gulp-watch) — отслеживание изменений в ваших файлах проекта;
-* [gulp-clean](https://www.npmjs.com/package/gulp-clean) — удаление файлов и папок;
-* [gulp-iconfont](https://www.npmjs.com/package/gulp-iconfont) — Create SVG/TTF/EOT/WOFF/WOFF2 fonts from several SVG icons with Gulp;
-* [yargs](https://www.npmjs.com/package/yargs) - получение аргументов командной строки в Node.js.
+> If you did everything right, you should have a browser open with a local server and running `browser-sync`.
+
+### **Using via Docker**
+
+* Install Node.js - <https://nodejs.org/en/>
+* Install Docker - <https://www.docker.com/products/docker-desktop/>
+* Install `yarn`: <https://classic.yarnpkg.com/en/docs/install>;
+* Type: `yarn global add gulp-cli` to install Gulp CLI globally for correct work
+* Type: `docker pull ghcr.io/kenclaron/frontend-page-sample:main` to clone package in Docker
+* Type: `docker run -p 8080:80 -it --name frontend-page-sample ghcr.io/kenclaron/frontend-page-sample:main` to launch project
+* Open `localhost:8080` or `127.0.0.1:8080`
+
+```text
+  yarn global add gulp-cli
+  docker pull ghcr.io/kenclaron/frontend-page-sample:main
+  docker run -p 8080:80 -it --name frontend-page-sample ghcr.io/kenclaron/frontend-page-sample:main
+```
+
+### **Open Webpage**
+
+* Open: `{soon}`
+
+## Plugins
+
+* [browser-sync](https://browsersync.io/docs/gulp) — live reloading of the web page when changes are made to your project files. One of the options - `tunnel`, which gives you a link so that anyone can see your work (bypassing hosting);
+* [gulp-if](https://www.npmjs.com/package/gulp-if) — run jobs only when needed;
+* [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) — automatically arranges vendor prefixes in CSS according to the service [Can I Use](https://caniuse.com/);
+* [gulp-babel](https://www.npmjs.com/package/gulp-babel) — using `ES6` with [Babel](https://babeljs.io/);
+* [gulp-pug](https://www.npmjs.com/package/gulp-pug) — compile `.pug` to `HTML`;
+* [gulp-sass](https://www.npmjs.com/package/gulp-sass) — compile `.scss` to `.css`;
+* [gulp-concat](https://www.npmjs.com/package/gulp-concat) — merge files;
+* [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) — minimize `.js`;
+* [gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css) — minimize `.css`;
+* [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) — sourcemaps for styles;
+* [gulp-svg-sprites](https://www.npmjs.com/package/gulp-svg-sprites) — create `.svg`-sprites;
+* [gulp-rename](https://www.npmjs.com/package/gulp-rename) — rename files, add suffixes and prefixes;
+* [gulp-clean](https://www.npmjs.com/package/gulp-clean) — delete files and folders;
+* [gulp-replace](https://www.npmjs.com/package/gulp-replace) — replace lines;
+* [gulp-plumber](https://www.npmjs.com/package/gulp-plumber) — notifications in terminal (ex. errors in SCSS/Sass);
+* [gulp-debug](https://www.npmjs.com/package/gulp-debug) — debug in terminal;
+* [gulp-watch](https://www.npmjs.com/package/gulp-watch) — track changes in your project files;
+* [gulp-iconfont](https://www.npmjs.com/package/gulp-iconfont) — create `.svg`/`.ttf`/`.eot`/`.woff`/`.woff2` fonts from several `.svg` icons with `Gulp`;
+* [yargs](https://www.npmjs.com/package/yargs) — get command line arguments in Node.js.
+
+## Project folder
+
+```text
+frontend-page-sample
+├── dist               - Builded project
+│   └── assets         - Sources from src/static
+│       ├── js         - Compiled .js-files
+│       └── css        - Compiled .css-files
+│
+└── src                - Source fiels
+    ├── iconfont       - Source for iconfont (svg), 
+    │
+    ├── js             - .js-files
+    │   ├── components - .js-components
+    │   └── libs       - Third-party libraries
+    │
+    ├── pngsprite      - Sources for .png-sprite
+    │
+    ├── scss           - .scss-files
+    │   ├── components - .scss-components
+    │   ├── fonts
+    │   ├── generated  - Generated sprites and font styles
+    │   ├── img        - Images for styles
+    │   ├── templates  - Templated for sprites and fonts
+    │   └── vendor     - Third-party styles
+    │
+    ├── static         - Static files
+    │   ├── ajax       - Ajax responses
+    │   └── img        - Images
+    │
+    ├── svgsprite      - Sources for .svg-sprite
+    │
+    └── views          - .pug-templates
+        └── _includes  - Importing files
+            ├── blocks - Importing blocks
+            └── mixins - Importing mixins
+```
+
+## Preview
+
+[<img src="https://i.imgur.com/7Fh7zjg.png" width="48%"/>](https://i.imgur.com/7Fh7zjg.png)
+[<img src="https://i.imgur.com/jspbxVR.png" width="48%"/>](https://i.imgur.com/jspbxVR.png)
+
+## License
+
+The **Frontend Page Sample** licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Author
+
+> You can express your gratitude by clicking on one of the links
+
+* [Personal website](https://kenclaron.github.io/kenclaron)
+* [VK](https://vk.com/club190729942)

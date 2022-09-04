@@ -1,0 +1,18 @@
+.tile {
+  $root: &;
+
+  display: none;
+
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: stretch;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 2.49rem 2.35rem;
+
+  &._visible {
+    display: grid;
+  }
+}

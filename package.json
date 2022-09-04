@@ -1,11 +1,7 @@
 {
-    "name": "frontend-pack",
-    "author": "riverstart.ru",
+    "name": "frontend-page-sample",
+    "author": "riverstart.ru, Dmitry Britov",
     "version": "2.0.0",
-    "repository": {
-        "type": "git",
-        "url": "git.rs-app.ru/rs/html/frontend-pack.git"
-    },
     "license": "MIT",
     "scripts": {
         "dev": "gulp",
@@ -36,7 +32,9 @@
         "@babel/preset-env": "^7.18.2",
         "@babel/register": "^7.17.7",
         "ansi-colors": "^4.1.3",
+        "babel": "^6.23.0",
         "babel-loader": "^8.2.5",
+        "babel-register": "^6.26.0",
         "browser-sync": "^2.27.10",
         "critical": "^4.0.1",
         "eslint": "^8.17.0",
@@ -52,16 +50,13 @@
         "gulp-iconfont": "^11.0.1",
         "gulp-iconfont-css": "^3.0.0",
         "gulp-if": "^3.0.0",
-        "gulp-imagemin": "7.1.0",
         "gulp-plumber": "^1.2.1",
         "gulp-pug": "^5.0.0",
         "gulp-sass": "^5.1.0",
         "gulp-sourcemaps": "^3.0.0",
         "gulp-spritesmash": "^1.1.1",
         "gulp-svg-sprite": "^1.5.0",
-        "gulp-webp": "^4.0.1",
         "gulp.spritesmith": "^6.13.0",
-        "imagemin-mozjpeg": "9.0.0",
         "imagemin-webp": "6.0.0",
         "require-dir": "^1.2.0",
         "sass": "^1.52.3",
@@ -72,7 +67,6 @@
     },
     "dependencies": {
         "@fancyapps/ui": "^4.0.27",
-        "inputmask": "^5.0.7",
-        "lazysizes": "^5.3.2"
+        "babel-require": "^1.0.1"
     }
 }

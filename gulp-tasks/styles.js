@@ -42,6 +42,7 @@ gulp.task('styles', () => {
                             removeUnusedAtRules: false,
                         },
                     },
+                    allowEmpty: true,
                 })
             )
         )

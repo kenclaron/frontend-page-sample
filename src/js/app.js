@@ -1,8 +1,9 @@
-import 'lazysizes'
-import { Fancybox } from '@fancyapps/ui'
-import Inputmask from 'inputmask'
-
 import InputLabel from './components/InputLabel'
+import CloseFeature from './components/CloseFeature'
+import ChangePlan from './components/ChangePlan'
+import ChangeTile from './components/ChangeTile'
+import ChangeContent from './components/ChangeContent'
+import InitProgressBar from './components/InitProgressBar'
 
 class App {
     scrollToOffset = 100
@@ -16,34 +17,16 @@ class App {
         }
         this.body = document.querySelector('body')
 
-        this.initFancybox()
         this.initScrollTo()
 
-        this.initMask()
-        document.addEventListener(this.popupLoadedEvent, (ev) => {
-            this.initMask(ev.detail.$content)
-        })
-
         new InputLabel
+        new CloseFeature
+        new ChangePlan
+        new ChangeTile
+        new ChangeContent
+        new InitProgressBar
 
         this.body.classList.add('_init')
-    }
-
-    initFancybox() {
-        Fancybox.bind('[data-fancybox]', {
-            dragToClose : false,
-            on: {
-                done: (fancybox, slide) => {
-                    document.dispatchEvent(
-                        new CustomEvent(this.popupLoadedEvent, {
-                            detail: {
-                                $content: slide.$content,
-                            },
-                        })
-                    )
-                },
-            },
-        })
     }
 
     initInputLabel(wrapper = document) {
@@ -100,47 +83,6 @@ class App {
                 label.classList.add(className)
             }
         })
-    }
-
-    initMask(wrapper = document) {
-        const selector = 'input.js-mask[type="tel"]'
-        const items = wrapper.querySelectorAll(selector)
-        // простой вариант
-        // Inputmask({
-        //     mask: '+7 (999) 999 99 99',
-        //     showMaskOnHover: false,
-        // }).mask(items);
-        // подмена восьмерки, подстановка +7, городские номера
-        Inputmask({
-            mask: '+7 (999) 999-99-99',
-            postValidation: function (
-                buffer,
-                pos,
-                c,
-                currentResult,
-                opts,
-                maskset,
-                strict,
-                fromCheckval
-            ) {
-                // console.log(pos, c)
-                if (pos === 0 && ['0', '8'].indexOf(c) !== -1) {
-                    return {
-                        pos: 1,
-                        c: 7,
-                        remove: 4,
-                    }
-                }
-                if (pos === 4 && c === '7') {
-                    return {
-                        remove: 4,
-                    }
-                }
-                return true
-            },
-            showMaskOnHover: false,
-            jitMasking: true,
-        }).mask(items)
     }
 
     initScrollTo() {

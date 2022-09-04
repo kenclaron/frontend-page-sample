@@ -2,8 +2,8 @@
 $color-base: #171717;
 $color-white: #fff;
 $color-gray: #ccc;
-$color-primary: #E20210;
-$color-secondary: #0E3DB8;
+$color-primary: #FF5762;
+$color-secondary: #415DE8;
 
 $color-bg: #f8f8f8;
 $color-text: $color-base;
@@ -28,9 +28,9 @@ $header-height: (sm: 2rem,
 // $header-height-fixed: ;
 
 /* Fonts */
-$font-family: 'Fira Sans',
-sans-serif;
+$font-family: 'Lato', sans-serif;
 $font-family-alt: serif;
+$font-family-headers: "Metropolis", sans-serif;
 $font-family-icon: "iconfont";
 $font-family-fontello: "fontello";
 $font-size: 1rem;
