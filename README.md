@@ -92,6 +92,8 @@ frontend-page-sample
 │       ├── js         - Compiled .js-files
 │       └── css        - Compiled .css-files
 │
+├── gulp-tasks         - .js-tasks for gulp
+│
 └── src                - Source fiels
     ├── iconfont       - Source for iconfont (svg), 
     │
